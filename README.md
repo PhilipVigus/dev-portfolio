@@ -66,3 +66,27 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+My notes
+
+Setting up CD on Heroku
+
+- log in to heroku from the commandline
+  - `heroku login`
+- create a new app with the buildpack, this ensures its a production version
+  - `heroku create phil-dev-portfolio --buildpack https://github.com/mars/create-react-app-buildpack.git`
+- add a `static.json` file to the root directory with the following contents:
+  ```json
+{
+"root": "build/",
+  "clean_urls": false,
+  "routes": {
+    "/**": "index.html"
+  }
+}
+  ```
+
+- commit changes and push to heroku master
+  - `git push heroku master`
+- about half an hour later......open the deployed app with
+  - `heroku open` or by going to the app's address
