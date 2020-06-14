@@ -90,3 +90,25 @@ Setting up CD on Heroku
   - `git push heroku master`
 - about half an hour later......open the deployed app with
   - `heroku open` or by going to the app's address
+
+Setting up CI on Travis
+
+- Add the repository to your travis account on the website
+- Make sure you have the correct Travis cli installed (Doh!) https://github.com/travis-ci/travis.rb
+- login in
+  - `travis login`
+- create a basic .travis.yml file
+```
+language: node_js
+node_js:
+- 14.4.0
+```
+- run `travis setup heroku` to get the basics in there
+- run `travis encrypt <heroku api key from account settings> --add deploy.api_key --pro`
+  - the pro is important as it is needed when you're using travis.com as opposed to .org
+  - this will generate and add an encrypted key to the travis.yaml file
+- turn on 'wait for CD to pass' in the heroku settings for the project
+- delete the yarn.lock file
+- trigger a build, either by pushing to master or doing it manually on the website
+- if all tests pass, this should all run through, now deploying to Heroku on success
+- to be triple-sure you can push a failing test to master, and travis should block the build from deploying to heroku
