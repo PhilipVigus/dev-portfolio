@@ -70,6 +70,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 My notes
 
 Setting up CD on Heroku
+https://dev.to/webdevraj/deploy-a-react-app-on-heroku-the-right-way-5efo
 
 - log in to heroku from the commandline
   - `heroku login`
