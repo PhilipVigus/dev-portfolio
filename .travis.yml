@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 14.4.0
+cache: yarn
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: F2lTfREPuiFbi3snA/QeetT4L+G+OfnwXAQ56aqy3EqdrH3NLRhiFZfyZCG95it88lvuxCK4cfD8FpGLhu3pzgUEGZtJophPnTnFpiip4eIG3WqmTv2m1WithbvFlryXOfLxKzFS40JnJXYMP1NiwplrqVtI8YOcw0YT/o4wZfRg1LqZbjvsrpiP+UydyTzUnqIBHZxgcZ7bsQP4yM34We5RlWQQ5Lvx4Y2roquuPE9jcHGPyf+imnyCrxzo7YQN6hZaKpRAVpkhnEc6H4RCL3He4rphxjPuRPEWr9n76pDVi1njQDYbiPrpAAy10Mhbu9qnyqiZDqufs63J+8EncFomw0IVdqL/NlFYErJbBOM43jnGmfB1SeS4LYpjSgSE8HL/uqq61wuT6NtRiH1AhsaRRXUTPLkMzv0irY478XEsQzBeJeZH4cggAhRGibJyxS7saYiAPmXXFBbCgNXEUv/7vFhWYCJEOCpvdh6c8E1lpTp8Bu7lldm95mscoIhroOQtygzp748UATmUM/HMYcTYJ13ZCNp0HlSbPKV08pepGlJ6rZDDNUerLZwuK8Cl9fYIADQz93RAOvAgnE+XSvs8hveP2nhmi00Kcn1to5yRc9mtZ7EG7VgsogFODob4+IMVPebqML5zM2SU1isnp1RLJFtp/wF6PjIE42h8BBY=
+  app: phil-dev-portfolio
+  on:
+    repo: PhilipVigus/dev-portfolio
+  skip_cleanup: 'true'
