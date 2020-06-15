@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - 14.4.0
+branches:
+  only:
+    - master
+    - dev
 after_script:
   - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
 deploy:
