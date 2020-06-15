@@ -117,6 +117,36 @@ node_js:
 - if all tests pass, this should all run through, now deploying to Heroku on success
 - to be triple-sure you can push a failing test to master, and travis should block the build from deploying to heroku
 
+Setting up coveralls.io
+
+- create an account
+- link it to your github
+- connect the repo you're specifically interested in
+- get the repo token from settings
+- copy that into the environmental variables on travis for the repo you're linking, with the name coveralls_repo_token
+- amend the test script in package.json by adding the --coverage flag
+- add the following script
+  
+```"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"```
+
+- install the coveralls npm module as a developer dependency
+- amend the travis config file with:
+  
+```
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
+```
+
+- optionally, restrict the branches that travis builds on with
+
+```
+branches:
+  only:
+    - master
+    - dev
+```
+
+
 [![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=dev)
 [![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=masters)
 [![Build Status](https://travis-ci.com/PhilipVigus/dev-portfolio.svg?branch=master)](https://travis-ci.com/PhilipVigus/dev-portfolio)
