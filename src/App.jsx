@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import Login from "./components/login";
+import LoadingScreen from "./components/loadingScreen";
 
 function App() {
-  return <Login />;
+  return <LoadingScreen />;
 }
 
 export default App;

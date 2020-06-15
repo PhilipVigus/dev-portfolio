@@ -1,13 +1,13 @@
 import React from "react";
-import "./login.css";
+import "./loadingScreen.css";
 
-function Login() {
+function LoadingScreen() {
   return (
-    <div className="login-container">
+    <div className="loading-screen-container">
       <span style={{ color: "lawngreen" }}>phil@awesome-dev</span>:
       <span style={{ color: "mediumturquoise" }}>~</span>$<span>&#9608;</span>
     </div>
   );
 }
 
-export default Login;
+export default LoadingScreen;

@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Login from "../components/login";
+import LoadingScreen from "../components/loadingScreen";
 
 test("renders learn react link", () => {
-  render(<Login />);
+  render(<LoadingScreen />);
   expect(screen.getByText("phil@awesome-dev")).toBeInTheDocument();
 });
