@@ -77,7 +77,8 @@ https://dev.to/webdevraj/deploy-a-react-app-on-heroku-the-right-way-5efo
 - create a new app with the buildpack, this ensures its a production version
   - `heroku create phil-dev-portfolio --buildpack https://github.com/mars/create-react-app-buildpack.git`
 - add a `static.json` file to the root directory with the following contents:
-  ```json
+
+```json
 {
 "root": "build/",
   "clean_urls": false,
@@ -85,7 +86,7 @@ https://dev.to/webdevraj/deploy-a-react-app-on-heroku-the-right-way-5efo
     "/**": "index.html"
   }
 }
-  ```
+```
 
 - commit changes and push to heroku master
   - `git push heroku master`
@@ -99,11 +100,13 @@ Setting up CI on Travis
 - login in
   - `travis login`
 - create a basic .travis.yml file
+
 ```
 language: node_js
 node_js:
 - 14.4.0
 ```
+
 - run `travis setup heroku` to get the basics in there
 - run `travis encrypt <heroku api key from account settings> --add deploy.api_key --pro`
   - the pro is important as it is needed when you're using travis.com as opposed to .org
