@@ -116,3 +116,5 @@ node_js:
 - trigger a build, either by pushing to master or doing it manually on the website
 - if all tests pass, this should all run through, now deploying to Heroku on success
 - to be triple-sure you can push a failing test to master, and travis should block the build from deploying to heroku
+
+[![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=master)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=master)
