@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-- 14.4.0
-cache: yarn
+  - 14.4.0
+after_success: npm run coverage
 deploy:
   provider: heroku
   api_key:
@@ -9,4 +9,4 @@ deploy:
   app: phil-dev-portfolio
   on:
     repo: PhilipVigus/dev-portfolio
-  skip_cleanup: 'true'
+  skip_cleanup: "true"
