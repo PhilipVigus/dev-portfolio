@@ -43,7 +43,7 @@ function LoadingScreen() {
 
   return (
     <div className="loading-screen-container">
-      <span>
+      <span style={{ padding: "2vw" }}>
         <CommandPrompt />
         {displayedMessages}
         <Cursor />
