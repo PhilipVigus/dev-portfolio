@@ -1,15 +1,24 @@
 import React from "react";
+import { MemoryRouter as Router } from "react-router-dom";
 import { render, screen, waitFor } from "@testing-library/react";
 import LoadingScreen from "../components/loadingScreen";
 
-test("renders learn react link", () => {
-  render(<LoadingScreen />);
+test("renders command prompt", () => {
+  render(
+    <Router>
+      <LoadingScreen />
+    </Router>
+  );
   expect(screen.getByText("phil@awesome-dev")).toBeInTheDocument();
 });
 
 test("renders all of the system messages eventually", async () => {
   jest.setTimeout(20000);
-  render(<LoadingScreen />);
+  render(
+    <Router>
+      <LoadingScreen />
+    </Router>
+  );
 
   await waitFor(
     () => {
