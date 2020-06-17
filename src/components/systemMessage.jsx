@@ -7,9 +7,9 @@ function SystemMessage({ message, onFinishDisplay, speed }) {
 
   // eslint-disable-next-line consistent-return
   useEffect(() => {
-    if (displayedMessage.length - message.length < 3) {
+    if (displayedMessage.length - message.length < 20) {
       const timer = setTimeout(() => {
-        setDisplayedMessage(`${displayedMessage}.`);
+        setDisplayedMessage(`${displayedMessage} .`);
       }, speed);
       return () => clearTimeout(timer);
     }

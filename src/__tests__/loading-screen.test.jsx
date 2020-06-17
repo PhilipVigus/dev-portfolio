@@ -14,7 +14,7 @@ test("renders all of the system messages eventually", async () => {
   await waitFor(
     () => {
       expect(
-        screen.getByText("Ready for awesomeness overload...")
+        screen.getByText("Ready for awesomeness overload . . . . . . . . . .")
       ).toBeInTheDocument();
     },
     { timeout: 20000 }
