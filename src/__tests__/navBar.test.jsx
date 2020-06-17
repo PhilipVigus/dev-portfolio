@@ -1,9 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import LandingPage from "../components/landingPage";
+import NavBar from "../components/navBar";
 
 test("renders the static components", () => {
-  render(<LandingPage />);
+  render(<NavBar />);
   expect(screen.getByText("Navigation bar")).toBeInTheDocument();
-  expect(screen.getByText("Landing Page")).toBeInTheDocument();
 });
