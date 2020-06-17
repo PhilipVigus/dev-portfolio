@@ -1,11 +1,7 @@
 import React from "react";
 
 function ContactMe() {
-  return (
-    <div>
-      <div>Contact me</div>
-    </div>
-  );
+  return <div>Contact me</div>;
 }
 
 export default ContactMe;

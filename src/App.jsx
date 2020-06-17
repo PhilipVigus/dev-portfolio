@@ -6,6 +6,7 @@ import ContactMe from "./components/contactMe";
 import Projects from "./components/projects";
 import NavBar from "./components/navBar";
 import AboutMe from "./components/aboutMe";
+import Skills from "./components/skills";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Route path="/about" exact component={AboutMe} />
       <Route path="/projects" exact component={Projects} />
+      <Route path="/skills" exact component={Skills} />
       <Route path="/contact" exact component={ContactMe} />
       <Route path="/" exact component={LoadingScreen} />
     </Router>
