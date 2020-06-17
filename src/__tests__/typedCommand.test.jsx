@@ -9,7 +9,9 @@ test("doesn't initially render the command", async () => {
 });
 
 test("renders the command eventually", async () => {
-  render(<TypedCommand command="Command" speed="50" />);
+  render(
+    <TypedCommand command="Command" speed="50" onFinishDisplay={() => {}} />
+  );
 
   await waitFor(() => {
     expect(screen.getByText("Command")).toBeInTheDocument();

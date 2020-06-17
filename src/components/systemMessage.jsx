@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import "./systemMessage.css";
 
-function SystemMessage({ message }) {
-  const [dots, setDots] = useState(0);
+function SystemMessage({ message, onFinishDisplay }) {
   const [displayedMessage, setDisplayedMessage] = useState(message);
 
   useEffect(() => {
-    if (dots < 3) {
+    if (displayedMessage.length - message.length < 3) {
       const timer = setTimeout(() => {
-        setDots(dots + 1);
         setDisplayedMessage(`${displayedMessage}.`);
-      }, 500);
+      }, 300);
       return () => clearTimeout(timer);
     }
-  }, [dots, displayedMessage]);
+    onFinishDisplay();
+  }, [displayedMessage, onFinishDisplay, message.length]);
 
-  return <div>{`${displayedMessage}`}</div>;
+  return <span className="system-message">{`${displayedMessage}`}</span>;
 }
 
 SystemMessage.propTypes = {

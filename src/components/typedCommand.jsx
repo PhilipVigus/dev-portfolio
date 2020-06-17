@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import "./typedCommand.css";
 
-function TypedCommand({ command, speed }) {
+function TypedCommand({ command, speed, onFinishDisplay }) {
   const [position, setPosition] = useState(0);
 
   function getSpeedVariance() {
@@ -16,9 +17,11 @@ function TypedCommand({ command, speed }) {
       }, variableSpeed);
       return () => clearTimeout(timer);
     }
-  }, [command.length, position, speed]);
 
-  return <div>{command.slice(0, position)}</div>;
+    onFinishDisplay();
+  }, [onFinishDisplay, command.length, position, speed]);
+
+  return <span className="typed-command">{command.slice(0, position)}</span>;
 }
 
 TypedCommand.propTypes = {

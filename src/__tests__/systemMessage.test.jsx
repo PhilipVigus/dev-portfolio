@@ -8,7 +8,7 @@ test("renders the message without the dots to start with", async () => {
 });
 
 test("renders the full message eventually", async () => {
-  render(<SystemMessage message="Message" />);
+  render(<SystemMessage message="Message" onFinishDisplay={() => {}} />);
 
   await waitFor(
     () => {
