@@ -10,14 +10,12 @@ function LoadingScreen() {
 
   const [displayedMessages, setDisplayedMessages] = useState([
     <TypedCommand
-      key="0"
+      key="load awesome portfolio"
       command="load awesome portfolio"
       speed="100"
       onFinishDisplay={displayNextMessage}
     />,
   ]);
-
-  const [messageNumber, setMessageNumber] = useState(1);
 
   function displayNextMessage() {
     if (systemMessages.length === 0) {
@@ -31,7 +29,7 @@ function LoadingScreen() {
   function addSystemMessage(message) {
     const messageComponent = (
       <SystemMessage
-        key={messageNumber}
+        key={message}
         message={message}
         onFinishDisplay={displayNextMessage}
       />
@@ -41,8 +39,6 @@ function LoadingScreen() {
       ...displayedMessages,
       messageComponent,
     ]);
-
-    setMessageNumber(messageNumber + 1);
   }
 
   return (
