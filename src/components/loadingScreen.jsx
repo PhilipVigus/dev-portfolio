@@ -6,7 +6,18 @@ import SystemMessage from "./systemMessage";
 import "./loadingScreen.css";
 
 function LoadingScreen() {
-  const systemMessages = ["\nportfolio now loading", "\nslowly but surely"];
+  const systemMessages = [
+    "\nDemystifying corporate tax affairs",
+    "\nWrangling squirrel code",
+    "\nDiscombobulating ineffective colour choices",
+    "\nNormalising application uncertainties",
+    "\nCodifying wibbly line lengths",
+    "\nFenagling metaphoric page auras",
+    "\nMulching page debris",
+    "\nEmbiggening attribute importance",
+    "\nManipulating skill matrix cromulance",
+    "\nReady for awesomeness overload",
+  ];
 
   const [displayedMessages, setDisplayedMessages] = useState([
     <TypedCommand

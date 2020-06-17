@@ -8,12 +8,15 @@ test("renders learn react link", () => {
 });
 
 test("renders all of the system messages eventually", async () => {
+  jest.setTimeout(20000);
   render(<LoadingScreen />);
 
   await waitFor(
     () => {
-      expect(screen.getByText("slowly but surely...")).toBeInTheDocument();
+      expect(
+        screen.getByText("Ready for awesomeness overload...")
+      ).toBeInTheDocument();
     },
-    { timeout: 10000 }
+    { timeout: 20000 }
   );
 });
