@@ -77,7 +77,8 @@ https://dev.to/webdevraj/deploy-a-react-app-on-heroku-the-right-way-5efo
 - create a new app with the buildpack, this ensures its a production version
   - `heroku create phil-dev-portfolio --buildpack https://github.com/mars/create-react-app-buildpack.git`
 - add a `static.json` file to the root directory with the following contents:
-  ```json
+
+```json
 {
 "root": "build/",
   "clean_urls": false,
@@ -85,7 +86,7 @@ https://dev.to/webdevraj/deploy-a-react-app-on-heroku-the-right-way-5efo
     "/**": "index.html"
   }
 }
-  ```
+```
 
 - commit changes and push to heroku master
   - `git push heroku master`
@@ -99,11 +100,13 @@ Setting up CI on Travis
 - login in
   - `travis login`
 - create a basic .travis.yml file
+
 ```
 language: node_js
 node_js:
 - 14.4.0
 ```
+
 - run `travis setup heroku` to get the basics in there
 - run `travis encrypt <heroku api key from account settings> --add deploy.api_key --pro`
   - the pro is important as it is needed when you're using travis.com as opposed to .org
@@ -113,3 +116,37 @@ node_js:
 - trigger a build, either by pushing to master or doing it manually on the website
 - if all tests pass, this should all run through, now deploying to Heroku on success
 - to be triple-sure you can push a failing test to master, and travis should block the build from deploying to heroku
+
+Setting up coveralls.io
+
+- create an account
+- link it to your github
+- connect the repo you're specifically interested in
+- get the repo token from settings
+- copy that into the environmental variables on travis for the repo you're linking, with the name coveralls_repo_token
+- amend the test script in package.json by adding the --coverage flag
+- add the following script
+  
+```"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"```
+
+- install the coveralls npm module as a developer dependency
+- amend the travis config file with:
+  
+```
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
+```
+
+- optionally, restrict the branches that travis builds on with
+
+```
+branches:
+  only:
+    - master
+    - dev
+```
+
+
+[![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=dev)
+[![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=masters)
+[![Build Status](https://travis-ci.com/PhilipVigus/dev-portfolio.svg?branch=master)](https://travis-ci.com/PhilipVigus/dev-portfolio)

@@ -1,7 +1,12 @@
 language: node_js
 node_js:
-- 14.4.0
-cache: yarn
+  - 14.4.0
+branches:
+  only:
+    - master
+    - dev
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
 deploy:
   provider: heroku
   api_key:
@@ -9,4 +14,4 @@ deploy:
   app: phil-dev-portfolio
   on:
     repo: PhilipVigus/dev-portfolio
-  skip_cleanup: 'true'
+  skip_cleanup: "true"
