@@ -2,12 +2,18 @@ import React from "react";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import LoadingScreen from "./components/loadingScreen";
-import LandingPage from "./components/landingPage";
+import ContactMe from "./components/contactMe";
+import Projects from "./components/projects";
+import NavBar from "./components/navBar";
+import AboutMe from "./components/aboutMe";
 
 function App() {
   return (
     <Router>
-      <Route path="/landing-page" exact component={LandingPage} />
+      <NavBar />
+      <Route path="/about" exact component={AboutMe} />
+      <Route path="/projects" exact component={Projects} />
+      <Route path="/contact" exact component={ContactMe} />
       <Route path="/" exact component={LoadingScreen} />
     </Router>
   );

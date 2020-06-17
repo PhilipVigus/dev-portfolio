@@ -25,7 +25,7 @@ function LoadingScreen() {
   function displayNextMessage() {
     if (systemMessages.length === 0) {
       setTimeout(() => {
-        history.push("/landing-page");
+        history.push("/about");
       }, 1500);
 
       return;
@@ -51,7 +51,7 @@ function LoadingScreen() {
   }
 
   return (
-    <Link to="/landing-page">
+    <Link to="/about">
       <div className="loading-screen-container">
         <span style={{ padding: "6vw" }}>
           <CommandPrompt />
