@@ -9,7 +9,9 @@ test("renders the full message eventually", async () => {
 
   await waitFor(
     () => {
-      expect(screen.getByText("Message...")).toBeInTheDocument();
+      expect(
+        screen.getByText("Message . . . . . . . . . .")
+      ).toBeInTheDocument();
     },
     { timeout: 2000 }
   );
