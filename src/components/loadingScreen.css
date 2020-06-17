@@ -1,0 +1,12 @@
+.loading-screen-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
