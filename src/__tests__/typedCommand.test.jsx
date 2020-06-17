@@ -3,7 +3,9 @@ import { render, screen, waitFor } from "@testing-library/react";
 import TypedCommand from "../components/typedCommand";
 
 test("doesn't initially render the command", async () => {
-  const { queryByText } = render(<TypedCommand command="Command" speed="50" />);
+  const { queryByText } = render(
+    <TypedCommand command="Command" onFinishDisplay={() => {}} speed="50" />
+  );
 
   expect(queryByText("Command")).toBeNull();
 });

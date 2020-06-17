@@ -6,9 +6,10 @@ function TypedCommand({ command, speed, onFinishDisplay }) {
   const [position, setPosition] = useState(0);
 
   function getSpeedVariance() {
-    return Math.floor(Math.random() * 5);
+    return Math.floor(Math.random() * 10);
   }
 
+  // eslint-disable-next-line consistent-return
   useEffect(() => {
     const variableSpeed = getSpeedVariance() + parseInt(speed, 10);
     if (position < command.length) {
@@ -26,6 +27,7 @@ function TypedCommand({ command, speed, onFinishDisplay }) {
 
 TypedCommand.propTypes = {
   command: PropTypes.string.isRequired,
+  onFinishDisplay: PropTypes.func.isRequired,
   speed: PropTypes.string.isRequired,
 };
 

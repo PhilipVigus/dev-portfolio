@@ -9,7 +9,7 @@
 }
 
 html {
-  box-sizing: border-box; /* size calcuations take border and padding into account */
+  box-sizing: border-box; /* size calculations take border and padding into account */
 
   /*
     Assumes default font size on browser of 16px. 62.5% * 16 = 10px.

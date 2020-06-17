@@ -7,23 +7,24 @@ import "./loadingScreen.css";
 
 function LoadingScreen() {
   const systemMessages = [
-    "\nDemystifying corporate tax affairs",
-    "\nWrangling squirrel code",
-    "\nDiscombobulating ineffective colour choices",
-    "\nNormalising application uncertainties",
-    "\nCodifying wibbly line lengths",
-    "\nFenagling metaphoric page auras",
-    "\nMulching page debris",
-    "\nEmbiggening attribute importance",
-    "\nManipulating skill matrix cromulance",
-    "\nReady for awesomeness overload",
+    { content: "\nDemystifying corporate tax affairs", speed: 300 },
+    { content: "\nWrangling squirrel code", speed: 250 },
+    { content: "\nDiscombobulating ineffective colour choices", speed: 200 },
+    { content: "\nNormalising application uncertainties", speed: 150 },
+    { content: "\nCodifying wibbly line lengths", speed: 120 },
+    { content: "\nFinagling metaphoric page auras", speed: 110 },
+    { content: "\nMulching page debris", speed: 100 },
+    { content: "\nEmbiggening attribute importance", speed: 90 },
+    { content: "\nManipulating skill matrix cromulance", speed: 80 },
+    { content: "\nReady for awesomeness overload", speed: 80 },
   ];
 
   const [displayedMessages, setDisplayedMessages] = useState([
     <TypedCommand
       key="load awesome portfolio"
       command="load awesome portfolio"
-      speed="100"
+      speed="95"
+      // eslint-disable-next-line no-use-before-define
       onFinishDisplay={displayNextMessage}
     />,
   ]);
@@ -34,18 +35,17 @@ function LoadingScreen() {
     }
 
     const nextMessage = systemMessages.shift();
-    addSystemMessage(nextMessage);
-  }
 
-  function addSystemMessage(message) {
     const messageComponent = (
       <SystemMessage
-        key={message}
-        message={message}
+        key={nextMessage.content}
+        message={nextMessage.content}
         onFinishDisplay={displayNextMessage}
+        speed={nextMessage.speed}
       />
     );
 
+    // eslint-disable-next-line no-shadow
     setDisplayedMessages((displayedMessages) => [
       ...displayedMessages,
       messageComponent,
@@ -54,7 +54,7 @@ function LoadingScreen() {
 
   return (
     <div className="loading-screen-container">
-      <span style={{ padding: "2vw" }}>
+      <span style={{ padding: "6vw" }}>
         <CommandPrompt />
         {displayedMessages}
         <Cursor />
