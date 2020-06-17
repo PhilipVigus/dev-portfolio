@@ -9,5 +9,9 @@ test("renders the static components", () => {
       <NavBar />
     </Router>
   );
-  expect(screen.getByText("Navigation bar")).toBeInTheDocument();
+
+  expect(screen.getByRole("link", { name: "About Me" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Projects" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Skills" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Contact" })).toBeInTheDocument();
 });
