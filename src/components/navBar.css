@@ -1,0 +1,6 @@
+nav {
+  background-color: var(--darkest-shade);
+  color: var(--lightest-shade);
+  display: flex;
+  justify-content: space-around;
+}
