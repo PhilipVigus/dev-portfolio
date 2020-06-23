@@ -6,7 +6,7 @@ test("redirects to the about me page when you click", () => {
   render(<App />);
   const node = screen.getByText("phil@awesome-dev");
   fireEvent.click(node);
-  expect(screen.getByText("About me")).toBeInTheDocument();
+  expect(screen.getByText(/(full stack developer)/)).toBeInTheDocument();
 });
 
 test("redirects to the about me page after the loading screen is fully displayed", async () => {
@@ -15,7 +15,7 @@ test("redirects to the about me page after the loading screen is fully displayed
 
   await waitFor(
     () => {
-      expect(screen.getByText("About me")).toBeInTheDocument();
+      expect(screen.getByText(/(full stack developer)/)).toBeInTheDocument();
     },
     { timeout: 20000 }
   );
