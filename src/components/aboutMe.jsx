@@ -2,7 +2,9 @@ import React from "react";
 
 function AboutMe() {
   function greeting() {
-    const localHours = new Date().getHours();
+    const dateNow = new Date(Date.now());
+    const localHours = dateNow.getHours() - 1;
+
     if (localHours >= 0 && localHours < 12) {
       return "morning";
     } else if (localHours >= 12 && localHours < 17) {
