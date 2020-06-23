@@ -7,7 +7,11 @@ function Projects() {
       <div>
         WhatStack
         <div>
-          <img width="400px" src="./whatstack-screenshot.png" />
+          <img
+            width="400px"
+            src="./whatstack-screenshot.png"
+            alt="whatstack project screenshot"
+          />
         </div>
         <div>
           A cross between WhatsApp and Stack Overflow. Our final group project
@@ -21,7 +25,11 @@ function Projects() {
       <div>
         Trailers
         <div>
-          <img width="400px" src="./trailers-screenshot.png" />
+          <img
+            width="400px"
+            src="./trailers-screenshot.png"
+            alt="trailers project screenshot"
+          />
         </div>
         <div>
           A website I implement to help my wife and I track the films we want to
@@ -34,7 +42,11 @@ function Projects() {
       <div>
         Bowling
         <div>
-          <img width="400px" src="./bowling-screenshot.png" />
+          <img
+            width="400px"
+            src="./bowling-screenshot.png"
+            alt="bowling project screenshot"
+          />
         </div>
         <div>A client-side bowling card with automated scoring.</div>
         <div>Using - Javascript, Jasmine, CSS, HTML</div>
