@@ -3,13 +3,6 @@ import { render, screen } from "@testing-library/react";
 import AboutMe from "../components/aboutMe";
 
 describe("AboutMe", () => {
-  test("renders the static content", () => {
-    render(<AboutMe />);
-    expect(
-      screen.getByRole("heading", { name: "About me" })
-    ).toBeInTheDocument();
-  });
-
   describe("time specific greetings", () => {
     test("renders the the correct greeting in the morning", () => {
       jest

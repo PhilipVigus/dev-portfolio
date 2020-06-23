@@ -1,4 +1,5 @@
 import React from "react";
+import "./aboutMe.css";
 
 function AboutMe() {
   function greeting() {
@@ -13,15 +14,20 @@ function AboutMe() {
       return "evening";
     }
   }
+
   return (
-    <div>
-      <h2>About me</h2>
-      <img src="Scaled.jpg" width="100px" alt="A photograph of Phil Vigus" />
-      <p>
-        Good {greeting()} and welcome to my portfolio. My name&apos;s Phil and
-        I&apos;m a full stack developer. My language of choice is JavaScript,
-        and I am passionate about writing clean code.
-      </p>
+    <div className="about-me-container">
+      <div className="about-me-text">
+        <p>
+          Good {greeting()}! I&apos;m Phil, a full stack developer living in
+          London.
+        </p>
+      </div>
+      <img
+        className="photo"
+        src="Scaled.jpg"
+        alt="A photograph of Phil Vigus"
+      />
     </div>
   );
 }
