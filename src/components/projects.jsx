@@ -22,7 +22,7 @@ function Projects() {
           title="Trailers"
           image="trailers-screenshot.png"
           imageAltText="trailers project screenshot"
-          summaryText="A website I implement to help my wife and I track the films we want
+          summaryText="A website I built to help my wife and I track the films we want
           to watch based off of trailers we see."
           skills="Using - Javascript, MongoDB, Express, Node, PUG, Heroku, CSS, HTML"
           github="https://github.com/PhilipVigus/trailers-express"
