@@ -7,9 +7,7 @@ describe("AboutMe", () => {
     test("renders the the correct greeting in the morning", () => {
       jest
         .spyOn(global.Date, "now")
-        .mockImplementation(() =>
-          new Date("2020-06-23T00:00:00.135Z").valueOf()
-        );
+        .mockImplementation(() => new Date(2020, 6, 23).valueOf());
       render(<AboutMe />);
       expect(screen.getByText(/morning/)).toBeInTheDocument();
     });
@@ -17,9 +15,7 @@ describe("AboutMe", () => {
     test("renders the the correct greeting in the afternoon", () => {
       jest
         .spyOn(global.Date, "now")
-        .mockImplementation(() =>
-          new Date("2020-06-23T12:00:00.135Z").valueOf()
-        );
+        .mockImplementation(() => new Date(2020, 6, 23, 12, 0, 0).valueOf());
       render(<AboutMe />);
       expect(screen.getByText(/afternoon/)).toBeInTheDocument();
     });
@@ -27,9 +23,7 @@ describe("AboutMe", () => {
     test("renders the the correct greeting in the evening", () => {
       jest
         .spyOn(global.Date, "now")
-        .mockImplementation(() =>
-          new Date("2020-06-23T17:00:00.135Z").valueOf()
-        );
+        .mockImplementation(() => new Date(2020, 6, 23, 17, 0, 0).valueOf());
       render(<AboutMe />);
       expect(screen.getByText(/evening/)).toBeInTheDocument();
     });

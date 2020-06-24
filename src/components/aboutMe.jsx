@@ -4,7 +4,7 @@ import "./aboutMe.css";
 function AboutMe() {
   function greeting() {
     const dateNow = new Date(Date.now());
-    const localHours = dateNow.getHours() - 1;
+    const localHours = dateNow.getHours();
 
     if (localHours >= 0 && localHours < 12) {
       return "morning";
