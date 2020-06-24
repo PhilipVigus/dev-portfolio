@@ -38,6 +38,29 @@ function Skills() {
           </tr>
         </tbody>
       </table>
+      <h3>Non-technical</h3>
+      <h4>Communication</h4>
+      <p>
+        I excel with verbal and written communication, and am able to break
+        complex concepts down into small chunks so they can be easily discussed
+        and understood.
+      </p>
+      <h4>Problem solving</h4>
+      <p>I have a thorough, methodical approach to solving problems.</p>
+      <h4>An excellent understanding of how learning works</h4>
+      <p>
+        This helps me to learn quickly, independently and effectively, and
+        allows me to facilitate the learning of those around me.
+      </p>
+      <h4>High emotional intelligence</h4>
+      <p>
+        I am extremely self-aware, and am able to empathize effectively with
+        others.
+      </p>
+      <h4>Leadership</h4>
+      <p>I have strong leadership skills.</p>
+      <h4>Determination and persistence</h4>
+      <p>I don&apos;t know when or how to give up.</p>
     </div>
   );
 }
