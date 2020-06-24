@@ -15,6 +15,7 @@ function Projects() {
         at Makers Academy."
           skills="Using - Javascript, MongoDB, Express, React, Node, WebSockets, Jest,
         Auth0, React testing library, Heroku, CSS, HTML"
+          github="https://github.com/PhilipVigus/WhatStack"
         />
         <ProjectSummary
           title="Trailers"
@@ -23,6 +24,7 @@ function Projects() {
           summaryText="A website I implement to help my wife and I track the films we want
           to watch based off of trailers we see."
           skills="Using - Javascript, MongoDB, Express, Node, PUG, Heroku, CSS, HTML"
+          github="https://github.com/PhilipVigus/trailers-express"
         />
         <ProjectSummary
           title="Bowling"
@@ -30,6 +32,7 @@ function Projects() {
           imageAltText="bowling project screenshot"
           summaryText="A client-side bowling card with automated scoring."
           skills="Using - Javascript, Jasmine, CSS, HTML"
+          github="https://github.com/PhilipVigus/bowling-challenge"
         />
       </div>
     </div>
