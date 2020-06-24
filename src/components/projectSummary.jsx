@@ -8,6 +8,7 @@ function ProjectSummary({
   summaryText,
   skills,
   github,
+  deployLink,
 }) {
   return (
     <div className="project-summary-container">
@@ -24,6 +25,11 @@ function ProjectSummary({
       <div>
         <a href={github} rel="noopener noreferrer" target="_blank">
           GitHub
+        </a>
+      </div>
+      <div>
+        <a href={deployLink} rel="noopener noreferrer" target="_blank">
+          See it in action
         </a>
       </div>
     </div>

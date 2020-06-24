@@ -11,6 +11,7 @@ test("renders the static components", () => {
       summaryText="Project summary text"
       skills="Project skills"
       github="www.link-to-github.com"
+      deployLink="www.link-to-deploy.com"
     />
   );
 
@@ -21,6 +22,9 @@ test("renders the static components", () => {
     screen.getByRole("img", { name: "image alt text" })
   ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "GitHub" })).toBeInTheDocument();
+  expect(
+    screen.getByRole("link", { name: "See it in action" })
+  ).toBeInTheDocument();
   expect(screen.getByText("Project summary text")).toBeInTheDocument();
   expect(screen.getByText("Project skills")).toBeInTheDocument();
 });
