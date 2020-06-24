@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./projectSummary.css";
 
 function ProjectSummary({
@@ -35,5 +36,15 @@ function ProjectSummary({
     </div>
   );
 }
+
+ProjectSummary.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  imageAltText: PropTypes.string.isRequired,
+  summaryText: PropTypes.string.isRequired,
+  skills: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+  deployLink: PropTypes.string.isRequired,
+};
 
 export default ProjectSummary;
