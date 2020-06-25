@@ -5,7 +5,6 @@ import "./projects.css";
 function Projects() {
   return (
     <div>
-      Projects page
       <div className="project-summaries-container">
         <ProjectSummary
           title="WhatStack"
