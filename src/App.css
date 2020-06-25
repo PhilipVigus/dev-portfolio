@@ -59,6 +59,10 @@ a {
   text-decoration: inherit;
 }
 
+p {
+  margin-bottom: 10px;
+}
+
 .main-content-container {
   background-color: var(--lightest-shade);
   height: 100vh;

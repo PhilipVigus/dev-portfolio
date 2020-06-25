@@ -38,7 +38,7 @@ function AboutMe() {
             developer there will always be something new to understand.
           </p>
           <p>
-            If, after looking at my portfolio, you want to know more, you should
+            After looking at my portfolio, if you want to know more then please
             check the following links:
           </p>
           <div className="about-me-link-container">
@@ -49,9 +49,9 @@ function AboutMe() {
                 rel="noopener noreferrer"
               >
                 <img
+                  className="about-me-link-image"
                   src="./github-logo.png"
                   alt="My Github account"
-                  height="50px"
                 />
               </a>
             </span>
@@ -62,9 +62,9 @@ function AboutMe() {
                 rel="noopener noreferrer"
               >
                 <img
+                  className="about-me-link-image"
                   src="./linkedin-logo.png"
                   alt="My LinkedIn profile"
-                  height="50px"
                 />
               </a>
             </span>
@@ -74,7 +74,11 @@ function AboutMe() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="./CV-icon.png" alt="My CV" height="50px" />
+                <img
+                  src="./CV-icon.png"
+                  alt="My CV"
+                  className="about-me-link-image"
+                />
               </a>
             </span>
             <span>
@@ -84,9 +88,9 @@ function AboutMe() {
                 rel="noopener noreferrer"
               >
                 <img
+                  className="about-me-link-image"
                   src="./medium-logo.png"
                   alt="My Medium blog"
-                  height="50px"
                 />
               </a>
             </span>
