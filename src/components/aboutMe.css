@@ -16,6 +16,7 @@
   transform: rotate(5deg);
   width: 15%;
   height: auto;
+  align-self: flex-start;
 }
 
 .about-me-link-container {
