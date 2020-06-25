@@ -8,7 +8,13 @@ function NavBar() {
       <NavBarLink link="about" text="About Me" />
       <NavBarLink link="projects" text="Projects" />
       <NavBarLink link="skills" text="Skills" />
-      <NavBarLink link="contact" text="Contact" />
+      <a
+        href="mailto:philipvigus@yahoo.co.uk"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contact
+      </a>
     </nav>
   );
 }

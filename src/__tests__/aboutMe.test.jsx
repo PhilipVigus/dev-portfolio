@@ -3,6 +3,23 @@ import { render, screen } from "@testing-library/react";
 import AboutMe from "../components/aboutMe";
 
 describe("AboutMe", () => {
+  describe("static content", () => {
+    test("renders external links", () => {
+      render(<AboutMe />);
+
+      expect(
+        screen.getByRole("link", { name: "My Github account" })
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("link", { name: "My LinkedIn profile" })
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("link", { name: "My Medium blog" })
+      ).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "My CV" })).toBeInTheDocument();
+    });
+  });
+
   describe("time specific greetings", () => {
     test("renders the the correct greeting in the morning", () => {
       jest

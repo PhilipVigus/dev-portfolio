@@ -26,8 +26,10 @@ function AboutMe() {
             After qualifying with a degree in Computer Science, I&apos;ve spent
             much of my career in education, initially as an ICT teacher before
             moving into quality assurance, where I worked with clients across
-            London to improve the quality of their educational provision. I have
-            now changed direction, returning to my roots in technology. I
+            London to improve the quality of their educational provision.
+          </p>
+          <p>
+            I have now changed direction, returning to my roots in technology. I
             recently completed the bootcamp at Makers Academy to prepare myself
             for a career in software development. I love the blend of creative
             and analytical skills required, and seeing an application grow
@@ -35,6 +37,60 @@ function AboutMe() {
             learning, and the constantly changing tech landscape means that as a
             developer there will always be something new to understand.
           </p>
+          <p>
+            If, after looking at my portfolio, you want to know more, you should
+            check the following links:
+          </p>
+          <div className="about-me-link-container">
+            <span>
+              <a
+                href="https://github.com/PhilipVigus/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./github-logo.png"
+                  alt="My Github account"
+                  height="50px"
+                />
+              </a>
+            </span>
+            <span>
+              <a
+                href="https://www.linkedin.com/in/philvigus/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./linkedin-logo.png"
+                  alt="My LinkedIn profile"
+                  height="50px"
+                />
+              </a>
+            </span>
+            <span>
+              <a
+                href="./Phil Vigus CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./CV-icon.png" alt="My CV" height="50px" />
+              </a>
+            </span>
+            <span>
+              <a
+                href="https://medium.com/@philvigus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./medium-logo.png"
+                  alt="My Medium blog"
+                  height="50px"
+                />
+              </a>
+            </span>
+          </div>
         </div>
       </div>
       <img
