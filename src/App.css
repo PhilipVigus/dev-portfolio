@@ -1,7 +1,9 @@
 :root {
   --darkest-shade: #000e14;
   --lightest-shade: #e8f7ee;
+  --mid-shade: #5e8283;
   --background-colour: #224054;
+  --highlight-colour: #9ec385;
 }
 
 * {
@@ -64,8 +66,8 @@ p {
 }
 
 .main-content-container {
-  background-color: var(--lightest-shade);
-  height: 100vh;
+  background-color: white;
+  height: 100%;
   margin: 0 8.33%;
   padding: 4.16%;
 }
