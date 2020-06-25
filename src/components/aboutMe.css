@@ -35,7 +35,7 @@
 .about-me-link-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .about-me-link-image {
