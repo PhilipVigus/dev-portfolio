@@ -26,7 +26,18 @@ test("Contains some static text", () => {
   expect(screen.getByText(/(Loading screen 2)/)).toBeInTheDocument();
 });
 
-test("redirects to the about me page when you click", () => {
+test("redirects to the about me page after the loading screen is fully displayed", async () => {
+  render(<App />);
+
+  await waitFor(
+    () => {
+      expect(screen.getByText(/(full stack developer)/)).toBeInTheDocument();
+    },
+    { timeout: 2000 }
+  );
+});
+
+test.skip("redirects to the about me page when you click", () => {
   render(<App />);
   const node = screen.getByText(/(Loading screen 2)/);
   fireEvent.click(node);
