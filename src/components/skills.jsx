@@ -1,40 +1,63 @@
 import React from "react";
+import "./skills.css";
 
 function Skills() {
   return (
     <div>
-      <h2>My skills</h2>
       <table>
-        <thead>
-          <tr>
-            <th>Area</th>
-            <th>Skills</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td>Languages</td>
-            <td>Javascript, Ruby, SQL, CSS, HTML</td>
+            <td className="tech-skills-category">Languages</td>
+            <td>
+              My strongest language is JavaScript, but I also have experience
+              with Ruby. One of the main focuses of the course at Makers Academy
+              was teaching us how to learn new languages, and I am confident
+              that I can pick up anything needed quickly and efficiently. In
+              addition, I am also comfortable with HTML and CSS.
+            </td>
           </tr>
           <tr>
-            <td>Frameworks</td>
-            <td>React, Express, Rails, Sinatra</td>
+            <td className="tech-skills-category">Frameworks</td>
+            <td>
+              I have built several websites using the MERN stack, so am familiar
+              with React and Express. I have also used Rails and Sinatra.
+            </td>
           </tr>
           <tr>
-            <td>Databases</td>
-            <td>PostgreSQL, MongoDB</td>
+            <td className="tech-skills-category">Databases</td>
+            <td>
+              I have used basic SQL in conjunction with the PostgreSQL database,
+              and have also worked with MongoDB.
+            </td>
           </tr>
           <tr>
-            <td>Workflow</td>
-            <td>Git, Github, Travis CI/CD, Heroku, VSCode</td>
+            <td className="tech-skills-category">Workflow</td>
+            <td>
+              I am very familiar with Git, using master, dev and feature
+              branches as part of my day-to-day workflow. All of my work is on
+              Github, which I am comfortable using collaboratively as part of a
+              team with pull requests and code reviews. I have set up CI/CD for
+              several projects using Travis CI and Heroku, and my IDE of choice
+              is VS Code.
+            </td>
           </tr>
           <tr>
-            <td>Testing</td>
-            <td>Jest, Jasmine, RSpec, Capybara, React testing library</td>
+            <td className="tech-skills-category">Testing</td>
+            <td>
+              When working with JavaScript, I mainly use Jest, along with the
+              React testing library if I'm developing with the React framework.
+              With Ruby, I use RSpec and Capybara.
+            </td>
           </tr>
           <tr>
-            <td>Methodologies</td>
-            <td>OOP, MVC, TDD/BDD, Agile/Scrum/XP</td>
+            <td className="tech-skills-category">Methodologies</td>
+            <td>
+              I use TDD/BDD on all of my projects as appropriate. All Makers
+              Academy group projects were structured to use Agile/Scrum/XP
+              rituals, so I am familiar working with things like standups,
+              kanban boards and retrospectives. I also understand basic OOP and
+              MVC design principles and practices.
+            </td>
           </tr>
         </tbody>
       </table>

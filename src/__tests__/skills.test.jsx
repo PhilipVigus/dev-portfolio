@@ -4,5 +4,5 @@ import Skills from "../components/skills";
 
 test("renders the static components", () => {
   render(<Skills />);
-  expect(screen.getByText("My skills")).toBeInTheDocument();
+  expect(screen.getByText("Languages")).toBeInTheDocument();
 });
