@@ -4,11 +4,11 @@ import "./skills.css";
 function Skills() {
   return (
     <div>
-      <table>
+      <table className="tech-skills-table">
         <tbody>
-          <tr>
+          <tr className="tech-skills-row">
             <td className="tech-skills-category">Languages</td>
-            <td>
+            <td className="tech-skills-description">
               My strongest language is JavaScript, but I also have experience
               with Ruby. One of the main focuses of the course at Makers Academy
               was teaching us how to learn new languages, and I am confident
@@ -16,23 +16,23 @@ function Skills() {
               addition, I am also comfortable with HTML and CSS.
             </td>
           </tr>
-          <tr>
+          <tr className="tech-skills-row">
             <td className="tech-skills-category">Frameworks</td>
-            <td>
-              I have built several websites using the MERN stack, so am familiar
-              with React and Express. I have also used Rails and Sinatra.
+            <td className="tech-skills-description">
+              I am familiar with React and Express, having built a website using
+              the MERN. I have also used Rails and Sinatra.
             </td>
           </tr>
-          <tr>
+          <tr className="tech-skills-row">
             <td className="tech-skills-category">Databases</td>
-            <td>
+            <td className="tech-skills-description">
               I have used basic SQL in conjunction with the PostgreSQL database,
               and have also worked with MongoDB.
             </td>
           </tr>
-          <tr>
+          <tr className="tech-skills-row">
             <td className="tech-skills-category">Workflow</td>
-            <td>
+            <td className="tech-skills-description">
               I am very familiar with Git, using master, dev and feature
               branches as part of my day-to-day workflow. All of my work is on
               Github, which I am comfortable using collaboratively as part of a
@@ -41,17 +41,17 @@ function Skills() {
               is VS Code.
             </td>
           </tr>
-          <tr>
+          <tr className="tech-skills-row">
             <td className="tech-skills-category">Testing</td>
-            <td>
+            <td className="tech-skills-description">
               When working with JavaScript, I mainly use Jest, along with the
               React testing library if I'm developing with the React framework.
               With Ruby, I use RSpec and Capybara.
             </td>
           </tr>
-          <tr>
+          <tr className="tech-skills-row">
             <td className="tech-skills-category">Methodologies</td>
-            <td>
+            <td className="tech-skills-description">
               I use TDD/BDD on all of my projects as appropriate. All Makers
               Academy group projects were structured to use Agile/Scrum/XP
               rituals, so I am familiar working with things like standups,

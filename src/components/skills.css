@@ -1,7 +1,14 @@
 .tech-skills-category {
+  background-color: var(--highlight-colour-dark);
+  color: var(--lightest-shade);
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 2.08%;
   vertical-align: top;
 }
 
-.tech-skills {
-  vertical-align: top;
+.tech-skills-description {
+  background-color: var(--highlight-colour);
+  padding-left: 5px;
+  padding-top: 5px;
 }

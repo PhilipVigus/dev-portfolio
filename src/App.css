@@ -66,6 +66,11 @@ p {
   margin-bottom: 10px;
 }
 
+td {
+  border: 1px var(--background-colour) solid;
+  padding-bottom: 10px;
+}
+
 .main-content-container {
   background-color: white;
   height: 100%;
