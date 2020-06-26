@@ -11,4 +11,5 @@
   background-color: var(--lightest-shade);
   padding-left: 5px;
   padding-top: 5px;
+  vertical-align: top;
 }

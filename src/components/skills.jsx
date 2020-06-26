@@ -71,28 +71,56 @@ function Skills() {
         </tbody>
       </table>
       <h3>Non-technical</h3>
-      <h4>Communication</h4>
-      <p>
-        I excel with verbal and written communication, and am able to break
-        complex concepts down into small chunks so they can be easily discussed
-        and understood.
-      </p>
-      <h4>Problem solving</h4>
-      <p>I have a thorough, methodical approach to solving problems.</p>
-      <h4>An excellent understanding of how learning works</h4>
-      <p>
-        This helps me to learn quickly, independently and effectively, and
-        allows me to facilitate the learning of those around me.
-      </p>
-      <h4>High emotional intelligence</h4>
-      <p>
-        I am extremely self-aware, and am able to empathize effectively with
-        others.
-      </p>
-      <h4>Leadership</h4>
-      <p>I have strong leadership skills.</p>
-      <h4>Determination and persistence</h4>
-      <p>I don&apos;t know when or how to give up.</p>
+      <table className="tech-skills-table">
+        <tbody>
+          <tr className="tech-skills-row">
+            <td className="tech-skills-category">Communication</td>
+            <td className="tech-skills-description">
+              I excel with verbal and written communication, and am able to
+              break complex concepts down into small chunks so they can be
+              easily discussed and understood.
+            </td>
+          </tr>
+          <tr className="tech-skills-row">
+            <td className="tech-skills-category">Problem solving</td>
+            <td className="tech-skills-description">
+              I have a thorough, methodical approach to solving problems.
+            </td>
+          </tr>
+          <tr className="tech-skills-row">
+            <td className="tech-skills-category">
+              An excellent understanding of how learning works
+            </td>
+            <td className="tech-skills-description">
+              This helps me to learn quickly, independently and effectively, and
+              allows me to facilitate the learning of those around me.
+            </td>
+          </tr>
+          <tr className="tech-skills-row">
+            <td className="tech-skills-category">
+              High emotional intelligence
+            </td>
+            <td className="tech-skills-description">
+              I am extremely self-aware, and am able to empathize effectively
+              with others.
+            </td>
+          </tr>
+          <tr className="tech-skills-row">
+            <td className="tech-skills-category">Leadership</td>
+            <td className="tech-skills-description">
+              I have strong leadership skills.
+            </td>
+          </tr>
+          <tr className="tech-skills-row">
+            <td className="tech-skills-category">
+              Determination and persistence
+            </td>
+            <td className="tech-skills-description">
+              I don&apos;t know when or how to give up.
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
