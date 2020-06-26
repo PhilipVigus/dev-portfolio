@@ -40,8 +40,7 @@ function Skills() {
             <td className="tech-skills-description">
               I am very familiar with <strong>Git</strong>, using master, dev
               and feature branches as part of my day-to-day workflow. All of my
-              work is on
-              <strong>Github</strong>, which I am comfortable using
+              work is on <strong>Github</strong>, which I am comfortable using
               collaboratively as part of a team with pull requests and code
               reviews. I have set up <strong>CI/CD</strong> for several projects
               using <strong>Travis CI</strong> and <strong>Heroku</strong>, and
