@@ -62,7 +62,7 @@ a {
   text-decoration: inherit;
 }
 
-p {
+p:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
