@@ -34,3 +34,12 @@
   text-align: center;
   width: 100%;
 }
+
+.project-summary-link-source {
+  background-color: var(--highlight-colour);
+}
+
+.project-summary-link-demo {
+  background-color: var(--highlight-colour-dark);
+  color: var(--lightest-shade);
+}

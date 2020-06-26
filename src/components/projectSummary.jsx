@@ -26,12 +26,12 @@ function ProjectSummary({
         <div>{skills}</div>
       </div>
       <div className="project-summary-links-container">
-        <span className="project-summary-link">
+        <span className="project-summary-link project-summary-link-source">
           <a href={github} rel="noopener noreferrer" target="_blank">
             View Source
           </a>
         </span>
-        <span className="project-summary-link">
+        <span className="project-summary-link project-summary-link-demo">
           <a href={deployLink} rel="noopener noreferrer" target="_blank">
             Live Demo
           </a>
