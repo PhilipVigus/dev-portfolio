@@ -1,6 +1,10 @@
 :root {
   --darkest-shade: #000e14;
   --lightest-shade: #e8f7ee;
+  --mid-shade: #5e8283;
+  --background-colour: #224054;
+  --highlight-colour: #9ec385;
+  --highlight-colour-dark: #425f2e;
 }
 
 * {
@@ -47,7 +51,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: var(--background-colour);
   font-family: "Lato", sans-serif;
   font-size: 1.6em;
   line-height: 1.5;
@@ -56,4 +60,15 @@ body {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.main-content-container {
+  background-color: white;
+  height: 100%;
+  margin: 0 8.33%;
+  padding: 4.16%;
 }

@@ -5,11 +5,10 @@ import "./projects.css";
 function Projects() {
   return (
     <div>
-      Projects page
       <div className="project-summaries-container">
         <ProjectSummary
           title="WhatStack"
-          image="whatstack-screenshot.png"
+          image="whatstack-screenshot-full.png"
           imageAltText="whatstack project screenshot"
           summaryText="A cross between WhatsApp and Stack Overflow. Our final group project
         at Makers Academy."
@@ -20,7 +19,7 @@ function Projects() {
         />
         <ProjectSummary
           title="Trailers"
-          image="trailers-screenshot.png"
+          image="trailers-screenshot-full.png"
           imageAltText="trailers project screenshot"
           summaryText="A website I built to help my wife and I track the films we want
           to watch based off of trailers we see."
@@ -30,7 +29,7 @@ function Projects() {
         />
         <ProjectSummary
           title="Bowling"
-          image="bowling-screenshot.png"
+          image="bowling-screenshot-full.png"
           imageAltText="bowling project screenshot"
           summaryText="A client-side bowling card with automated scoring."
           skills="Using - Javascript, Jasmine, CSS, HTML"

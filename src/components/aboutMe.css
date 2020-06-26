@@ -1,6 +1,11 @@
 .about-me-container {
   display: flex;
-  margin: 10%;
+}
+
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column-reverse;
+  }
 }
 
 .about-me-heading {
@@ -14,13 +19,31 @@
   margin-left: 20px;
   max-width: 200px;
   transform: rotate(5deg);
-  width: 15%;
+  width: 12%;
   height: auto;
   align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .about-me-photo {
+    align-self: center;
+    margin: 10px 0 20px 0;
+    width: 15%;
+  }
 }
 
 .about-me-link-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.about-me-link-image {
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .about-me-link-image {
+    height: 30px;
+  }
 }

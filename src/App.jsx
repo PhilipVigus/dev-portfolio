@@ -11,10 +11,12 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Route path="/about" exact component={AboutMe} />
-      <Route path="/projects" exact component={Projects} />
-      <Route path="/skills" exact component={Skills} />
-      <Route path="/" exact component={LoadingScreen} />
+      <div className="main-content-container">
+        <Route path="/about" exact component={AboutMe} />
+        <Route path="/projects" exact component={Projects} />
+        <Route path="/skills" exact component={Skills} />
+        <Route path="/" exact component={LoadingScreen} />
+      </div>
     </Router>
   );
 }

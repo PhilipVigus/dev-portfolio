@@ -21,16 +21,26 @@ function ProjectSummary({
           alt={imageAltText}
         />
       </div>
-      <div>{summaryText}</div>
-      <div>{skills}</div>
-      <div>
-        <a href={github} rel="noopener noreferrer" target="_blank">
-          GitHub
-        </a>
+      <div className="project-summary-text-container">
+        <div>{summaryText}</div>
+        <div>{skills}</div>
       </div>
-      <div>
-        <a href={deployLink} rel="noopener noreferrer" target="_blank">
-          See it in action
+      <div className="project-summary-links-container">
+        <a
+          href={github}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="project-summary-link project-summary-link-source"
+        >
+          <span>View Source</span>
+        </a>
+        <a
+          href={deployLink}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="project-summary-link project-summary-link-demo"
+        >
+          <span>Live Demo</span>
         </a>
       </div>
     </div>
