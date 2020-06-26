@@ -25,3 +25,10 @@ test("Contains some static text", () => {
   render(<App />);
   expect(screen.getByText(/(Loading screen 2)/)).toBeInTheDocument();
 });
+
+test("redirects to the about me page when you click", () => {
+  render(<App />);
+  const node = screen.getByText(/(Loading screen 2)/);
+  fireEvent.click(node);
+  expect(screen.getByText(/(full stack developer)/)).toBeInTheDocument();
+});
