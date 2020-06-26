@@ -16,6 +16,7 @@
   "plugins": ["react", "jest", "prettier"],
   "rules": {
     "prettier/prettier": ["error"],
-    "no-else-return": "off"
+    "no-else-return": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }
