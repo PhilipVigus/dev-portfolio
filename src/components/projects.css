@@ -1,0 +1,9 @@
+.project-summaries-container {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .project-summaries-container {
+    flex-direction: column;
+  }
+}
