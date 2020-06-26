@@ -23,7 +23,7 @@
 
 .project-summary-links-container {
   display: flex;
-  flex: 0 1 auto%;
+  flex: 0 1 auto;
   flex-direction: row;
   justify-content: space-evenly;
 }
