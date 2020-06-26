@@ -66,6 +66,10 @@ p:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
+table {
+  margin-bottom: 15px;
+}
+
 td {
   border: 1px var(--background-colour) solid;
   padding-bottom: 10px;
