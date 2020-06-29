@@ -12,7 +12,7 @@ function LoadingScreen2() {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [history]);
 
   return (
     <Link to="/about">
