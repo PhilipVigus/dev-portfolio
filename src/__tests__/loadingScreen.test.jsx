@@ -13,7 +13,7 @@ test("renders command prompt", () => {
 });
 
 test("renders all of the system messages eventually", async () => {
-  jest.setTimeout(20000);
+  jest.setTimeout(8000);
   render(
     <Router>
       <LoadingScreen />
@@ -26,6 +26,6 @@ test("renders all of the system messages eventually", async () => {
         screen.getByText("Ready for awesomeness overload . . . . . . . . . .")
       ).toBeInTheDocument();
     },
-    { timeout: 20000 }
+    { timeout: 8000 }
   );
 });
