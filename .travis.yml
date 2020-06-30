@@ -15,3 +15,7 @@ deploy:
   on:
     repo: PhilipVigus/dev-portfolio
   skip_cleanup: "true"
+  provider: netlify
+  site: phil-vigus.netlify.app
+  auth: $netlify_repo_token
+  edge: true # opt in to dpl v2
