@@ -8,7 +8,10 @@ branches:
 after_script:
   - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
 deploy:
-  provider: netlify
-  site: phil-vigus
-  auth: $netlify_repo_token
-  edge: true # opt in to dpl v2
+  provider: heroku
+  api_key:
+    secure: WbgavfA7IRMWwJ/nihENQb60kdPrI06oFG8v5HjakCFk9iqXsOIEolxvXpTUaYJtkl9b2OUfBI/Lo4AeIpssvFL5yKKPMAtUxhx8ZbGRd4sNu2eNWOo1JwlpnIP/jo87bURNyckK4dUlERXdENexwk9AsUJsBdOsq2TUiLA1gMYUVJJ+NYGg25AH7JBySZKI+f6yNrMUI/Dw2LKoy3r0NQ9cuXl5nQfWzDLjmIDjDm+ujTKId2uh8KC5PqQy++nNw+eCTLVLCY12YlJOvyq3UT02wRkyiigpB80yfmNhVa7elN8ApHUx44gj2YcVvtiNbaAOii5z6HOSB46OzJLv8lBl4qEfmKmCmeurYrEUzS0ron7ZZ6r/hYSVOH0nVHaIYsLlPSw91MyJf5xnQJZZSYs7YnlTJ0vLO7JB+NzlYb6wB+RIihAWN11tfUrKjBcBfCzLncp8gdNKCDKixftzJbaym201lSWgxFJBY/3C0Qx0nDNRFdkNTG9qa1+58kBRgxHFywVBLRzBT1uOVY4p9mykj62vVstEcBfdkmwp2rPjtnmN6U3gQVPma0EMT3xjV9dgReRtUvYelTBYzm721WeAo4YXS1thYf9GhaNx1+eQkKdCB5aFiY1xbNZLgsjDouyHgeP9SpG5K6mtSvHkdZRDr9tJkwvVE7NEGFwlj7M=
+  app: phil-dev-portfolio
+  on:
+    repo: PhilipVigus/dev-portfolio
+  skip_cleanup: "true"
