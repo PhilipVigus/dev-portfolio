@@ -9,6 +9,6 @@ after_script:
   - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
 deploy:
   provider: netlify
-  site: phil-vigus.netlify.app
+  site: phil-vigus
   auth: $netlify_repo_token
   edge: true # opt in to dpl v2
