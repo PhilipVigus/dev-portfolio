@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  act,
-  render,
-  screen,
-  waitFor,
-  fireEvent,
-} from "@testing-library/react";
+import { act, render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import Main from "../components/main";
 
