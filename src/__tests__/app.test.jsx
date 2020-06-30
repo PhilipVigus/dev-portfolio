@@ -8,7 +8,6 @@ test("Contains some static text", async () => {
 });
 
 test("redirects to the about me page after the loading screen is fully displayed", async () => {
-  expect.assertions(1);
   jest.useFakeTimers();
   render(<App />);
   act(() => jest.advanceTimersByTime(1000));
@@ -16,7 +15,6 @@ test("redirects to the about me page after the loading screen is fully displayed
 });
 
 test("redirects to the about me page when you click", async () => {
-  expect.assertions(1);
   render(<App />);
   const node = await screen.findByText(/(Loading screen 2)/);
   fireEvent.click(node);

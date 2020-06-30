@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, MemoryRouter as Router } from "react-router-dom";
 import "./App.css";
 import LoadingScreen from "./components/loadingScreen";
 import LoadingScreen2 from "./components/loadingScreen2";
