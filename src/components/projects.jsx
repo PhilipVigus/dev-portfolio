@@ -22,7 +22,7 @@ function Projects() {
           image="trailers-screenshot-full.png"
           imageAltText="trailers project screenshot"
           summaryText="A website I built to help my wife and I track the films we want
-          to watch based off of trailers we see."
+          to watch based off of trailers we watch."
           skills="Using - Javascript, MongoDB, Express, Node, PUG, Heroku, CSS, HTML"
           github="https://github.com/PhilipVigus/trailers-express"
           deployLink="http://trailers-express.herokuapp.com/"
