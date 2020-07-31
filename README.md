@@ -1,152 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Developer Portfolio
 
-## Available Scripts
+![portfolio screenshot](./about-me-screenshot.png) 
+![portfolio screenshot](./projects-screenshot.png) 
 
-In the project directory, you can run:
+[![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=masters) [![Build Status](https://travis-ci.com/PhilipVigus/dev-portfolio.svg?branch=master)](https://travis-ci.com/PhilipVigus/dev-portfolio)
 
-### `yarn start`
+This repository contains my professional portfolio, a website that can currently be found [here](https://phil-dev-portfolio.herokuapp.com/).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Technologies used
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+| Purpose             | Technology                  |
+| :------------------ | :-------------------------- |
+| Language            | JavaScript                  |
+| Frontend            | React                       |
+| Testing             | Jest, React Testing Library |
+| Static code quality | ESLint, Prettier            |
+| Test coverage       | Coveralls                   |
+| CI/CD               | Travis CI, Heroku           |
 
-### `yarn test`
+#### Getting started
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Dependencies
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-My notes
-
-Setting up CD on Heroku
-https://dev.to/webdevraj/deploy-a-react-app-on-heroku-the-right-way-5efo
-
-- log in to heroku from the commandline
-  - `heroku login`
-- create a new app with the buildpack, this ensures its a production version
-  - `heroku create phil-dev-portfolio --buildpack https://github.com/mars/create-react-app-buildpack.git`
-- add a `static.json` file to the root directory with the following contents:
-
-```json
-{
-"root": "build/",
-  "clean_urls": false,
-  "routes": {
-    "/**": "index.html"
-  }
-}
-```
-
-- commit changes and push to heroku master
-  - `git push heroku master`
-- about half an hour later......open the deployed app with
-  - `heroku open` or by going to the app's address
-
-Setting up CI on Travis
-
-- Add the repository to your travis account on the website
-- Make sure you have the correct Travis cli installed (Doh!) https://github.com/travis-ci/travis.rb
-- login in
-  - `travis login`
-- create a basic .travis.yml file
+This project requires node and yarn to be installed.
 
 ```
-language: node_js
-node_js:
-- 14.4.0
+# clone the repository to your local machine with either
+# if you're using ssh
+git clone git@github.com:PhilipVigus/dev-portfolio.git
+
+# if you're using https
+git clone https://github.com/PhilipVigus/dev-portfolio.git
+
+# then run npm install from the project root directory
+npm install
+
+# to start a local version of the site
+npm run start
 ```
 
-- run `travis setup heroku` to get the basics in there
-- run `travis encrypt <heroku api key from account settings> --add deploy.api_key --pro`
-  - the pro is important as it is needed when you're using travis.com as opposed to .org
-  - this will generate and add an encrypted key to the travis.yaml file
-- turn on 'wait for CD to pass' in the heroku settings for the project
-- delete the yarn.lock file
-- trigger a build, either by pushing to master or doing it manually on the website
-- if all tests pass, this should all run through, now deploying to Heroku on success
-- to be triple-sure you can push a failing test to master, and travis should block the build from deploying to heroku
-
-Setting up coveralls.io
-
-- create an account
-- link it to your github
-- connect the repo you're specifically interested in
-- get the repo token from settings
-- copy that into the environmental variables on travis for the repo you're linking, with the name coveralls_repo_token
-- amend the test script in package.json by adding the --coverage flag
-- add the following script
-  
-```"coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"```
-
-- install the coveralls npm module as a developer dependency
-- amend the travis config file with:
-  
-```
-after_script:
-  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
-```
-
-- optionally, restrict the branches that travis builds on with
+##### Running tests
 
 ```
-branches:
-  only:
-    - master
-    - dev
+npm run test
 ```
 
+#### My approach
 
-[![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=dev)
-[![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=masters)
-[![Build Status](https://travis-ci.com/PhilipVigus/dev-portfolio.svg?branch=master)](https://travis-ci.com/PhilipVigus/dev-portfolio)
+One of the main aims of this project was to set up a full CI/CD pipeline, so this is the area I concentrated on first. Apart from one or two minor hiccups with authenticating Heroku to be used with Travis, I had no problems doing this.
+
+Most of the frontend of the site was relatively straightforward to implement. However, there were a couple of issues:
+
+###### React-router-dom and testing
+
+One area I had issues with was the way I was testing React components that navigated between routes within the site. These tests passed when run individually, but depending on the order they were present in the file, would fail when run as a suite.
+
+I initially thought this was a problem with asynchronous testing. However, I eventually identified that the issue was with using the wrong type of router from the react-router-dom library when testing, which meant that the browser history was not being cleared between tests. Refactoring the code to allow different types of router to be used in the tests and deployed app itself fixed the problem.
+
+###### Working with timezones
+
+There is a small piece of code that varies a page's content depending on the time of day. The test for this passed on my local machine, but failed on Travis. I tracked this down to being because the Travis build was being done on a machine in a different timezone, and the code I'd written did not take this into account. Once identified, I rewrote the function to be timezone independent, which allowed the test to pass.
+
+#### Further work
+
+- There is still a lot I want to do with this site including:
+- CSS transitions
+- Adding a form to send emails rather than just providing an email link
+- Adding more visually interesting components, such as animations
+- Reworking the projects page to allow for more projects as they get added
+- Reviewing the code for the LoadingScreen component to ensure it's use of asynchronous code to be clearer
