@@ -1,8 +1,7 @@
 nav {
   background-color: var(--darkest-shade);
   color: var(--lightest-shade);
-  display: flex;
   font-size: 2rem;
-  justify-content: space-around;
-  padding: 10px 0;
+  padding: 10px 40px;
+  width: auto;
 }

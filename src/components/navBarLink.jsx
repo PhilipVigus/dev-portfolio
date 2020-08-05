@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function NavBarLink({ link, text }) {
-  return <Link to={link}>{text}</Link>;
+  return (
+    <div>
+      <Link to={link}>{text}</Link>
+    </div>
+  );
 }
 
 export default NavBarLink;
