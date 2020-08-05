@@ -19,7 +19,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   height: 20%;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 @media (max-width: 48em) {
@@ -32,5 +32,5 @@ nav {
 }
 
 .nav__link {
-  font-size: 3em;
+  font-size: 2rem;
 }
