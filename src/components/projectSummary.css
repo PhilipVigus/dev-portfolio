@@ -1,6 +1,7 @@
 .project-summary-container {
   background-color: var(--background-colour);
   border: 1px solid var(--background-colour);
+  box-shadow: 4px 4px 3px grey;
   color: var(--lightest-shade);
   display: flex;
   flex-direction: column;
