@@ -1,7 +1,19 @@
 nav {
   background-color: var(--darkest-shade);
   color: var(--lightest-shade);
+  height: 100vh;
   font-size: 2rem;
   padding: 10px 40px;
   width: auto;
+}
+
+.nav__link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30%;
+}
+
+.nav__link {
+  font-size: 3em;
 }
