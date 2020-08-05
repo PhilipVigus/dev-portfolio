@@ -1,11 +1,12 @@
 .project-summary-container {
   background-color: var(--background-colour);
+  border-radius: 3px;
   border: 1px solid var(--background-colour);
   box-shadow: 4px 4px 3px grey;
   color: var(--lightest-shade);
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 350px;
   width: 300px;
   min-width: 250px;
   max-width: 300px;
@@ -46,4 +47,24 @@
   display: inline-block;
   margin: 3px 10px;
   padding: 3px;
+}
+
+.project-summary__links-container {
+  background-color: var(--highlight-colour-dark);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.project-summary__link {
+  text-align: center;
+  font-size: 1.2em;
+  flex: 1 1 100%;
+  padding: 10px 0;
+}
+
+@media (hover: hover) {
+  .project-summary__link:hover {
+    background-color: var(--highlight-colour);
+  }
 }

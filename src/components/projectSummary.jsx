@@ -16,6 +16,24 @@ function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
           ))}
         </div>
       </div>
+      <div className="project-summary__links-container">
+        <a
+          className="project-summary__link"
+          href={github}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View Source
+        </a>
+        <a
+          className="project-summary__link"
+          href={deployLink}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Live Demo
+        </a>
+      </div>
     </div>
   );
 }
