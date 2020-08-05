@@ -1,16 +1,6 @@
 .project-summary-container {
-  background-color: var(--mid-shade);
-  border: 1px solid var(--mid-shade);
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  height: 300px;
-  width: 100%;
-}
-
-.project-summary-container__hidden {
   background-color: var(--background-colour);
-  border: 1px solid var(--mid-shade);
+  border: 1px solid var(--background-colour);
   color: var(--lightest-shade);
   display: flex;
   flex-direction: column;
@@ -22,11 +12,17 @@
   margin: 1%;
 }
 
+@media (hover: hover) {
+  .project-summary-container:hover {
+    background-color: var(--mid-shade);
+  }
+}
+
 .project-summary-container__heading {
   text-align: center;
 }
 
-.project-summary-container__heading-hidden {
+.project-summary-container__heading {
   text-align: center;
 }
 
