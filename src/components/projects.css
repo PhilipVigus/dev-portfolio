@@ -1,9 +1,7 @@
 .project-summaries-container {
-  display: flex;
-}
-
-@media (max-width: 1024px) {
-  .project-summaries-container {
-    flex-direction: column;
-  }
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+  width: auto;
+  background-color: blue;
 }

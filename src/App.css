@@ -89,6 +89,7 @@ td {
 .main-content-container {
   height: 100vh;
   margin: 50px;
+  width: 100%;
 }
 
 @media (max-width: 48em) {
