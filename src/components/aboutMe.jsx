@@ -23,77 +23,64 @@ function AboutMe() {
         </h1>
         <div>
           <p>
-            After qualifying with a degree in Computer Science, I&apos;ve spent
-            much of my career in education, initially as an ICT teacher before
-            moving into quality assurance, where I worked with clients across
-            London to improve the quality of their educational provision.
+            After qualifying with a degree in Computer Science, the early part
+            of my career was spent in the tech industry, initially as a
+            developer before moving into business development. After that I
+            trained as an ICT teacher and then took a role in educational
+            quality assurance. This involved working with clients across London
+            to improve the quality of their educational provision.
           </p>
           <p>
             I have now changed direction, returning to my roots in technology. I
             recently completed the bootcamp at Makers Academy to prepare myself
-            for a career in software development. I love the blend of creative
-            and analytical skills required, and seeing an application grow
-            before my eyes really excites me. I am happiest when I&apos;m
-            learning, and the constantly changing tech landscape means that as a
-            developer there will always be something new to understand.
+            for a return to career in software development. In addition to the
+            technical knowledge required to work as a developer, my career path
+            has left me with excellent communication and general interpersonal
+            skills from my various client-facing roles.
           </p>
           <p>
-            After looking at my portfolio, if you want to know more then please
-            check the following links:
+            I love the blend of creative and analytical skills required from a
+            developer, and seeing an application grow before my eyes really
+            excites me. I am happiest when I&apos;m learning, and the constantly
+            changing tech landscape means that there will always be something
+            new to understand.
           </p>
           <div className="about-me-link-container">
-            <span>
-              <a
-                href="https://github.com/PhilipVigus/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="about-me-link-image"
-                  src="./github-logo.png"
-                  alt="My Github account"
-                />
-              </a>
-            </span>
-            <span>
-              <a
-                href="https://www.linkedin.com/in/philvigus/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="about-me-link-image"
-                  src="./linkedin-logo.png"
-                  alt="My LinkedIn profile"
-                />
-              </a>
-            </span>
-            <span>
-              <a
-                href="./Phil Vigus CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./CV-icon.png"
-                  alt="My CV"
-                  className="about-me-link-image"
-                />
-              </a>
-            </span>
-            <span>
-              <a
-                href="https://medium.com/@philvigus"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="about-me-link-image"
-                  src="./medium-logo.png"
-                  alt="My Medium blog"
-                />
-              </a>
-            </span>
+            <a
+              className="about-me__link"
+              href="https://github.com/PhilipVigus/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+            |
+            <a
+              className="about-me__link"
+              href="https://www.linkedin.com/in/philvigus/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            |
+            <a
+              className="about-me__link"
+              href="https://medium.com/@philvigus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Blog
+            </a>
+            |
+            <a
+              className="about-me__link"
+              href="./Phil Vigus CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
+            </a>
           </div>
         </div>
       </div>

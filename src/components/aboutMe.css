@@ -9,6 +9,12 @@
   }
 }
 
+.about-me__header {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
 .about-me-heading {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -16,16 +22,11 @@
 
 .about-me-link-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   margin-top: 20px;
 }
 
-.about-me-link-image {
-  height: 50px;
-}
-
-@media (max-width: 768px) {
-  .about-me-link-image {
-    height: 30px;
-  }
+.about-me__link {
+  font-size: 1.6rem;
+  margin: 0 10px;
 }
