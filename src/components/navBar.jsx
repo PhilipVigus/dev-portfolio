@@ -8,7 +8,6 @@ function NavBar() {
       <div className="nav__link-container">
         <NavBarLink link="about" text="About" />
         <NavBarLink link="projects" text="Projects" />
-        <NavBarLink link="skills" text="Skills" />
         <a
           href="mailto:philipvigus@yahoo.co.uk"
           target="_blank"
