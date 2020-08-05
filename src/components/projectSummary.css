@@ -1,45 +1,70 @@
 .project-summary-container {
-  border: 1px solid var(--mid-shade);
-  background-color: var(--lightest-shade);
-  border-radius: 2px;
-  display: flex;
-  flex-basis: 33%;
-  flex-direction: column;
-  margin: 5px;
-}
-
-.project-summary-heading {
-  text-align: center;
-}
-
-.project-summary-image {
-  width: 100%;
-}
-
-.project-summary-text-container {
-  flex: 1 0 auto;
-  margin: 15px;
-}
-
-.project-summary-links-container {
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.project-summary-link {
-  background-color: var(--highlight-colour);
-  padding: 5px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.project-summary-link-source {
-  background-color: var(--highlight-colour);
-}
-
-.project-summary-link-demo {
-  background-color: var(--highlight-colour-dark);
+  background-color: var(--background-colour);
+  border-radius: 3px;
+  border: 1px solid var(--background-colour);
+  box-shadow: 4px 4px 3px grey;
   color: var(--lightest-shade);
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 300px;
+  min-width: 250px;
+  max-width: 300px;
+  flex: 0 0 25%;
+  margin: 1%;
+}
+
+@media (hover: hover) {
+  .project-summary-container:hover {
+    background-color: var(--mid-shade);
+  }
+}
+
+.project-summary-container__heading {
+  text-align: center;
+}
+
+.project-summary-container__heading {
+  text-align: center;
+}
+
+.project-summary-container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+.project-summary__skills-container {
+  text-align: center;
+}
+
+.project-summary__skill {
+  background-color: var(--highlight-colour);
+  border-radius: 6px;
+  color: var(--darkest-shade);
+  display: inline-block;
+  margin: 3px 10px;
+  padding: 3px;
+}
+
+.project-summary__links-container {
+  background-color: var(--highlight-colour-dark);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.project-summary__link {
+  text-align: center;
+  font-size: 1.2em;
+  flex: 1 1 100%;
+  padding: 10px 0;
+}
+
+@media (hover: hover) {
+  .project-summary__link:hover {
+    background-color: var(--highlight-colour);
+  }
 }
