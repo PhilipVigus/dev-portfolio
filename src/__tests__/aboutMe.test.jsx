@@ -7,16 +7,12 @@ describe("AboutMe", () => {
     test("renders external links", () => {
       render(<AboutMe />);
 
+      expect(screen.getByRole("link", { name: "Github" })).toBeInTheDocument();
       expect(
-        screen.getByRole("link", { name: "My Github account" })
+        screen.getByRole("link", { name: "LinkedIn" })
       ).toBeInTheDocument();
-      expect(
-        screen.getByRole("link", { name: "My LinkedIn profile" })
-      ).toBeInTheDocument();
-      expect(
-        screen.getByRole("link", { name: "My Medium blog" })
-      ).toBeInTheDocument();
-      expect(screen.getByRole("link", { name: "My CV" })).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "Blog" })).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "CV" })).toBeInTheDocument();
     });
   });
 
