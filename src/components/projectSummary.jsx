@@ -14,13 +14,6 @@ function ProjectSummary({
   return (
     <div className="project-summary-container">
       <h2 className="project-summary-heading">{title}</h2>
-      <div>
-        <img
-          className="project-summary-image"
-          src={`./${image}`}
-          alt={imageAltText}
-        />
-      </div>
       <div className="project-summary-text-container">
         <div>{summaryText}</div>
         <div>{skills}</div>
