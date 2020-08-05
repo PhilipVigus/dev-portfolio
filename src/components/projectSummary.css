@@ -9,17 +9,17 @@
 }
 
 .project-summary-container__hidden {
-  background-color: var(--mid-shade);
+  background-color: var(--background-colour);
   border: 1px solid var(--mid-shade);
+  color: var(--lightest-shade);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 300px;
   width: 300px;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 300px;
   flex: 0 0 25%;
-  margin: 5px;
+  margin: 1%;
 }
 
 .project-summary-container__heading {
@@ -28,4 +28,25 @@
 
 .project-summary-container__heading-hidden {
   text-align: center;
+}
+
+.project-summary-container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+.project-summary__skills-container {
+  text-align: center;
+}
+
+.project-summary__skill {
+  background-color: var(--highlight-colour);
+  border-radius: 6px;
+  color: var(--darkest-shade);
+  display: inline-block;
+  margin: 3px 10px;
+  padding: 3px;
 }

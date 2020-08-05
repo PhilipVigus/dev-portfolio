@@ -9,7 +9,7 @@ test("renders the static components", () => {
       image="trailers-screenshot.png"
       imageAltText="image alt text"
       summaryText="Project summary text"
-      skills="Project skills"
+      skills={["Project skills"]}
       github="www.link-to-github.com"
       deployLink="www.link-to-deploy.com"
     />

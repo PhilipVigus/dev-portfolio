@@ -14,6 +14,7 @@ function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
         }}
       >
         <h2 className="project-summary-container__heading">{title}</h2>
+        <div className="project-summary-container__text">{summaryText}</div>
       </div>
     );
   } else {
@@ -25,6 +26,16 @@ function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
         }}
       >
         <h2 className="project-summary-container__heading-hidden">{title}</h2>
+        <div className="project-summary-container__text">
+          <div>{summaryText}</div>
+          <div className="project-summary__skills-container">
+            {skills.map((skill) => (
+              <div className="project-summary__skill" key={skill}>
+                {skill}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
@@ -33,7 +44,7 @@ function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
 ProjectSummary.propTypes = {
   title: PropTypes.string.isRequired,
   summaryText: PropTypes.string.isRequired,
-  skills: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
   github: PropTypes.string.isRequired,
   deployLink: PropTypes.string.isRequired,
 };
