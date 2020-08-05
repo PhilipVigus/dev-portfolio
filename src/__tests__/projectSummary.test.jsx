@@ -9,7 +9,7 @@ test("renders the static components", () => {
       image="trailers-screenshot.png"
       imageAltText="image alt text"
       summaryText="Project summary text"
-      skills="Project skills"
+      skills={["Project skills"]}
       github="www.link-to-github.com"
       deployLink="www.link-to-deploy.com"
     />
@@ -18,11 +18,4 @@ test("renders the static components", () => {
   expect(
     screen.getByRole("heading", { name: "A project summary" })
   ).toBeInTheDocument();
-  expect(
-    screen.getByRole("img", { name: "image alt text" })
-  ).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "View Source" })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Live Demo" })).toBeInTheDocument();
-  expect(screen.getByText("Project summary text")).toBeInTheDocument();
-  expect(screen.getByText("Project skills")).toBeInTheDocument();
 });
