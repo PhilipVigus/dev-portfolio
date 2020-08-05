@@ -13,25 +13,6 @@
   margin-bottom: 15px;
 }
 
-.about-me-photo {
-  box-shadow: 0px 0px 0px 8px white, 0px 0px 0px 9px darkslategrey,
-    8px 8px 6px 6px rgb(150, 150, 150);
-  margin-left: 20px;
-  max-width: 200px;
-  transform: rotate(5deg);
-  width: 12%;
-  height: auto;
-  align-self: flex-start;
-}
-
-@media (max-width: 768px) {
-  .about-me-photo {
-    align-self: center;
-    margin: 10px 0 20px 0;
-    width: 15%;
-  }
-}
-
 .about-me-link-container {
   display: flex;
   justify-content: space-around;
