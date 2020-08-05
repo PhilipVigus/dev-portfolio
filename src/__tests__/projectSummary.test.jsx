@@ -18,9 +18,6 @@ test("renders the static components", () => {
   expect(
     screen.getByRole("heading", { name: "A project summary" })
   ).toBeInTheDocument();
-  expect(
-    screen.getByRole("img", { name: "image alt text" })
-  ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "View Source" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Live Demo" })).toBeInTheDocument();
   expect(screen.getByText("Project summary text")).toBeInTheDocument();
