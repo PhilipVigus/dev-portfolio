@@ -33,7 +33,7 @@ function AboutMe() {
           <p>
             I have now changed direction, returning to my roots in technology. I
             recently completed the bootcamp at Makers Academy to prepare myself
-            for a return to career in software development. In addition to the
+            for a return to a career in software development. In addition to the
             technical knowledge required to work as a developer, my career path
             has left me with excellent communication and general interpersonal
             skills from my various client-facing roles.
