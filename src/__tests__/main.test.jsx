@@ -52,22 +52,5 @@ describe("Main", () => {
         screen.getByRole("heading", { name: "WhatStack" })
       ).toBeInTheDocument();
     });
-
-    it("navigates to the skills page", () => {
-      render(
-        <Router>
-          <Main />
-        </Router>
-      );
-      let node = screen.getByText("phil@awesome-dev");
-      fireEvent.click(node);
-
-      node = screen.getByRole("link", { name: "Skills" });
-      fireEvent.click(node);
-
-      expect(
-        screen.getByRole("heading", { name: "Technical" })
-      ).toBeInTheDocument();
-    });
   });
 });

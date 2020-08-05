@@ -10,8 +10,7 @@ test("renders the static components", () => {
     </Router>
   );
 
-  expect(screen.getByRole("link", { name: "About Me" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "About" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Projects" })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Skills" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Contact" })).toBeInTheDocument();
 });

@@ -97,11 +97,6 @@ function AboutMe() {
           </div>
         </div>
       </div>
-      <img
-        className="about-me-photo"
-        src="Scaled.jpg"
-        alt="A photograph of Phil Vigus"
-      />
     </div>
   );
 }
