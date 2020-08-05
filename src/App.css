@@ -1,6 +1,6 @@
 :root {
   --darkest-shade: #000e14;
-  --lightest-shade: #e8f7ee;
+  --lightest-shade: #ffffff;
   --mid-shade: #5e8283;
   --background-colour: #224054;
   --highlight-colour: #9ec385;
@@ -80,7 +80,19 @@ td {
   display: flex;
 }
 
+@media (max-width: 48em) {
+  .app-container {
+    flex-direction: column;
+  }
+}
+
 .main-content-container {
   height: 100vh;
-  padding: 2.08%;
+  margin: 50px;
+}
+
+@media (max-width: 48em) {
+  .main-content-container {
+    margin: 30px;
+  }
 }

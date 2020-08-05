@@ -3,15 +3,32 @@ nav {
   color: var(--lightest-shade);
   height: 100vh;
   font-size: 2rem;
-  padding: 10px 40px;
+  padding: 10px 3%;
   width: auto;
+}
+
+@media (max-width: 48em) {
+  nav {
+    height: auto;
+    padding: 10px;
+  }
 }
 
 .nav__link-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 30%;
+  justify-content: space-between;
+  height: 20%;
+  margin-top: 50px;
+}
+
+@media (max-width: 48em) {
+  .nav__link-container {
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    margin-top: 0;
+  }
 }
 
 .nav__link {
