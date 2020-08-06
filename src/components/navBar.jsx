@@ -9,6 +9,7 @@ function NavBar() {
         <NavBarLink link="about" text="About" />
         <NavBarLink link="projects" text="Projects" />
         <a
+          className="nav__link"
           href="mailto:philipvigus@yahoo.co.uk"
           target="_blank"
           rel="noopener noreferrer"
