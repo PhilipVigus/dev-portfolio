@@ -4,11 +4,11 @@ import "./ProjectSummary.css";
 
 function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
   return (
-    <div className="project-summary-container">
-      <h2 className="project-summary-container__heading">{title}</h2>
-      <div className="project-summary-container__text">
+    <div className="project-summary">
+      <h2 className="project-summary__heading">{title}</h2>
+      <div className="project-summary__text">
         <div>{summaryText}</div>
-        <div className="project-summary__skills-container">
+        <div className="project-summary__skills-list">
           {skills.map((skill) => (
             <div className="project-summary__skill" key={skill}>
               {skill}
@@ -16,7 +16,7 @@ function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
           ))}
         </div>
       </div>
-      <div className="project-summary__links-container">
+      <div className="project-summary__links-list">
         <a
           className="project-summary__link"
           href={github}
