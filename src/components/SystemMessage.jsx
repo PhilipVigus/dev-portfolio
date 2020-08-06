@@ -2,22 +2,25 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./SystemMessage.css";
 
-function SystemMessage({ message, onFinishDisplay, speed }) {
+const SystemMessage = ({ message, onFinishDisplay, speed }) => {
+  const progressString = " .";
+  const lengthToAdd = progressString.length * 10;
   const [displayedMessage, setDisplayedMessage] = useState(message);
 
-  // eslint-disable-next-line consistent-return
   useEffect(() => {
-    if (displayedMessage.length - message.length < 20) {
+    if (displayedMessage.length - message.length < lengthToAdd) {
       const timer = setTimeout(() => {
-        setDisplayedMessage(`${displayedMessage} .`);
+        setDisplayedMessage(`${displayedMessage}${progressString}`);
       }, speed);
       return () => clearTimeout(timer);
     }
+
     onFinishDisplay();
-  }, [displayedMessage, onFinishDisplay, message.length, speed]);
+    return () => {};
+  }, [displayedMessage, onFinishDisplay, message.length, speed, lengthToAdd]);
 
   return <span className="system-message">{`${displayedMessage}`}</span>;
-}
+};
 
 SystemMessage.propTypes = {
   message: PropTypes.string.isRequired,
