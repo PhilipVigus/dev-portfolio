@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import AboutMe from "../components/aboutMe";
+import AboutMe from "../components/AboutMe";
 
 describe("AboutMe", () => {
   describe("static content", () => {

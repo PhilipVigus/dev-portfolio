@@ -1,28 +1,18 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import CommandPrompt from "./commandPrompt";
-import Cursor from "./cursor";
-import TypedCommand from "./typedCommand";
-import SystemMessage from "./systemMessage";
+import CommandPrompt from "./CommandPrompt";
+import Cursor from "./Cursor";
+import TypedCommand from "./TypedCommand";
+import SystemMessage from "./SystemMessage";
 import messageData from "./messageData";
-import "./loadingScreen.css";
+import "./LoadingScreen.css";
 
-function LoadingScreen() {
+const LoadingScreen = () => {
   const history = useHistory();
   const systemMessages = messageData;
   const [displayCursor, setDisplayCursor] = useState(true);
 
-  const [displayedMessages, setDisplayedMessages] = useState([
-    <TypedCommand
-      key="load awesome portfolio"
-      command="load awesome portfolio"
-      speed="95"
-      // eslint-disable-next-line no-use-before-define
-      onFinishDisplay={displayNextMessage}
-    />,
-  ]);
-
-  function displayNextMessage() {
+  const displayNextMessage = () => {
     if (systemMessages.length === 0) {
       setTimeout(() => {
         history.push("/about");
@@ -44,15 +34,25 @@ function LoadingScreen() {
     );
 
     // eslint-disable-next-line no-shadow
+    // eslint-disable-next-line no-use-before-define
     setDisplayedMessages((displayedMessages) => [
       ...displayedMessages,
       messageComponent,
     ]);
-  }
+  };
+
+  const [displayedMessages, setDisplayedMessages] = useState([
+    <TypedCommand
+      key="load awesome portfolio"
+      command="load awesome portfolio"
+      speed="95"
+      onFinishDisplay={displayNextMessage}
+    />,
+  ]);
 
   return (
     <Link to="/about">
-      <div className="loading-screen-container">
+      <div className="loading-screen">
         <span style={{ padding: "6vw" }}>
           <CommandPrompt />
           {displayedMessages}
@@ -61,6 +61,6 @@ function LoadingScreen() {
       </div>
     </Link>
   );
-}
+};
 
 export default LoadingScreen;

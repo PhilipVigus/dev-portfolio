@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import CommandPrompt from "../components/commandPrompt";
+import CommandPrompt from "../components/CommandPrompt";
 
 test("renders the command prompt", () => {
   render(<CommandPrompt />);

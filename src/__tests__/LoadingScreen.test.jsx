@@ -1,7 +1,7 @@
 import React from "react";
 import { MemoryRouter as Router } from "react-router-dom";
 import { render, screen, waitFor } from "@testing-library/react";
-import LoadingScreen from "../components/loadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 test("renders command prompt", () => {
   render(

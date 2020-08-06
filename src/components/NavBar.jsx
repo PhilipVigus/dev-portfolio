@@ -1,8 +1,8 @@
 import React from "react";
-import NavBarLink from "./navBarLink";
-import "./navBar.css";
+import NavBarLink from "./NavBarLink";
+import "./NavBar.css";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <nav>
       <div className="nav__link-container">
@@ -18,6 +18,6 @@ function NavBar() {
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;

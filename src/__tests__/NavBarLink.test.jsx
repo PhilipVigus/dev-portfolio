@@ -1,7 +1,7 @@
 import React from "react";
 import { MemoryRouter as Router } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
-import NavBarLink from "../components/navBarLink";
+import NavBarLink from "../components/NavBarLink";
 
 test.only("renders the static components", () => {
   render(
