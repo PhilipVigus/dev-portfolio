@@ -1,12 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function NavBarLink({ link, text }) {
   return (
-    <div className="navbar-link">
-      <Link to={link}>{text}</Link>
-    </div>
+    <Link to={link}>
+      <span className="nav__link">{text}</span>
+    </Link>
   );
 }
+
+NavBarLink.propTypes = {
+  link: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default NavBarLink;
