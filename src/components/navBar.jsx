@@ -13,7 +13,7 @@ function NavBar() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Contact
+          <span className="nav__link">Contact</span>
         </a>
       </div>
     </nav>
