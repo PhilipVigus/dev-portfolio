@@ -32,12 +32,12 @@ const AboutMe = () => {
           </p>
           <p>
             I have now changed direction, returning to my roots in technology. I
-            recently completed the bootcamp at Maker's Academy to prepare myself
-            for a return to software development. In addition to the technical
-            knowledge required to work as a developer, I have excellent
-            communication and general interpersonal skills from my various
-            client-facing roles. This gives me the perfect combination of skills
-            and experience.
+            recently completed the bootcamp at Maker&apos;s Academy to prepare
+            myself for a return to software development. In addition to the
+            technical knowledge required to work as a developer, I have
+            excellent communication and general interpersonal skills from my
+            various client-facing roles. This gives me the perfect combination
+            of skills and experience.
           </p>
           <p>
             I love the blend of creative and analytical skills required from a
