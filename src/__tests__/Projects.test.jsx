@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Projects from "../components/projects";
+import Projects from "../components/Projects";
 
 test("renders the static components", () => {
   render(<Projects />);

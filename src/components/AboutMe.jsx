@@ -1,25 +1,25 @@
 import React from "react";
-import "./aboutMe.css";
+import "./AboutMe.css";
 
-function AboutMe() {
-  function greeting() {
+const AboutMe = () => {
+  const getTimeOfDay = () => {
     const dateNow = new Date(Date.now());
-    const localHours = dateNow.getHours();
+    const currentHours = dateNow.getHours();
 
-    if (localHours >= 0 && localHours < 12) {
+    if (currentHours >= 0 && currentHours < 12) {
       return "morning";
-    } else if (localHours >= 12 && localHours < 17) {
+    } else if (currentHours >= 12 && currentHours < 17) {
       return "afternoon";
     } else {
       return "evening";
     }
-  }
+  };
 
   return (
-    <div className="about-me-container">
-      <div className="about-me-text-container">
-        <h1 className="about-me-heading">
-          Good {greeting()}! I&apos;m Phil, a full stack developer
+    <div className="about-me__container">
+      <div>
+        <h1 className="about-me__header">
+          Good {getTimeOfDay()}! I&apos;m Phil, a full stack developer
         </h1>
         <div>
           <p>
@@ -32,12 +32,12 @@ function AboutMe() {
           </p>
           <p>
             I have now changed direction, returning to my roots in technology. I
-            recently completed the bootcamp at Maker's Academy to prepare myself
-            for a return to software development. In addition to the technical
-            knowledge required to work as a developer, I have excellent
-            communication and general interpersonal skills from my various
-            client-facing roles. This gives me the perfect combination of skills
-            and experience.
+            recently completed the bootcamp at Maker&apos;s Academy to prepare
+            myself for a return to software development. In addition to the
+            technical knowledge required to work as a developer, I have
+            excellent communication and general interpersonal skills from my
+            various client-facing roles. This gives me the perfect combination
+            of skills and experience.
           </p>
           <p>
             I love the blend of creative and analytical skills required from a
@@ -46,7 +46,7 @@ function AboutMe() {
             changing tech landscape means that there will always be something
             new to understand.
           </p>
-          <div className="about-me-link-container">
+          <div className="about-me__link-container">
             <a
               className="about-me__link"
               href="https://github.com/PhilipVigus/"
@@ -87,6 +87,6 @@ function AboutMe() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutMe;
