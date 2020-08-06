@@ -2,10 +2,10 @@ import React from "react";
 import ProjectSummary from "./ProjectSummary";
 import "./Projects.css";
 
-function Projects() {
+const Projects = () => {
   return (
     <div>
-      <div className="project-summaries-container">
+      <div className="project-summaries">
         <ProjectSummary
           title="Chitter"
           summaryText="A Twitter clone written in Typescript."
@@ -62,6 +62,6 @@ function Projects() {
       </div>
     </div>
   );
-}
+};
 
 export default Projects;
