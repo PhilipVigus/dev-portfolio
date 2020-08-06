@@ -1,11 +1,11 @@
 # Developer Portfolio
 
-![portfolio screenshot](./about-me-screenshot.png) 
-![portfolio screenshot](./projects-screenshot.png) 
+![portfolio screenshot](./about-me-screenshot.png)
+![portfolio screenshot](./projects-screenshot.png)
 
 [![Coverage Status](https://coveralls.io/repos/github/PhilipVigus/dev-portfolio/badge.svg?branch=configure-coveralls.io)](https://coveralls.io/github/PhilipVigus/dev-portfolio?branch=masters) [![Build Status](https://travis-ci.com/PhilipVigus/dev-portfolio.svg?branch=master)](https://travis-ci.com/PhilipVigus/dev-portfolio)
 
-This repository contains my professional portfolio, a website that can currently be found [here](https://phil-dev-portfolio.herokuapp.com/).
+This repository contains my professional portfolio, a website that can currently be found [here](https://philvigus.com).
 
 #### Technologies used
 
@@ -63,9 +63,6 @@ There is a small piece of code that varies a page's content depending on the tim
 
 #### Further work
 
-- There is still a lot I want to do with this site including:
-- CSS transitions
 - Adding a form to send emails rather than just providing an email link
 - Adding more visually interesting components, such as animations
-- Reworking the projects page to allow for more projects as they get added
-- Reviewing the code for the LoadingScreen component to ensure it's use of asynchronous code to be clearer
+- Reworking the colour scheme
