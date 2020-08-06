@@ -1,7 +1,7 @@
 import React from "react";
 import { act, render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
-import Main from "../components/main";
+import Main from "../components/Main";
 
 describe("Main", () => {
   describe("Redirects from the loading screen", () => {

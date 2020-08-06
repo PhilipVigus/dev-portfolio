@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import CommandPrompt from "./commandPrompt";
-import Cursor from "./cursor";
-import TypedCommand from "./typedCommand";
-import SystemMessage from "./systemMessage";
+import CommandPrompt from "./CommandPrompt";
+import Cursor from "./Cursor";
+import TypedCommand from "./TypedCommand";
+import SystemMessage from "./SystemMessage";
 import messageData from "./messageData";
-import "./loadingScreen.css";
+import "./LoadingScreen.css";
 
 function LoadingScreen() {
   const history = useHistory();

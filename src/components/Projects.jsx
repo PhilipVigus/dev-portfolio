@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectSummary from "./projectSummary";
-import "./projects.css";
+import ProjectSummary from "./ProjectSummary";
+import "./Projects.css";
 
 function Projects() {
   return (

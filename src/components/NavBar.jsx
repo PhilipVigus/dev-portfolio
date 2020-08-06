@@ -1,6 +1,6 @@
 import React from "react";
-import NavBarLink from "./navBarLink";
-import "./navBar.css";
+import NavBarLink from "./NavBarLink";
+import "./NavBar.css";
 
 function NavBar() {
   return (

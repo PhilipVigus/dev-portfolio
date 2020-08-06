@@ -1,10 +1,10 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import LoadingScreen from "./loadingScreen";
-import Projects from "./projects";
-import NavBar from "./navBar";
-import AboutMe from "./aboutMe";
-import "./main.css";
+import LoadingScreen from "./LoadingScreen";
+import Projects from "./Projects";
+import NavBar from "./NavBar";
+import AboutMe from "./AboutMe";
+import "./Main.css";
 
 function Main() {
   return (

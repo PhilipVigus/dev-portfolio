@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutMe.css";
+import "./AboutMe.css";
 
 function AboutMe() {
   function greeting() {

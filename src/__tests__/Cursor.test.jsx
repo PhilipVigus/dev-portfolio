@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Cursor from "../components/cursor";
+import Cursor from "../components/Cursor";
 
 test("renders the cursor", () => {
   render(<Cursor />);

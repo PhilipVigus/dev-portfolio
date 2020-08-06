@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
-import TypedCommand from "../components/typedCommand";
+import TypedCommand from "../components/TypedCommand";
 
 test("doesn't initially render the command", async () => {
   const { queryByText } = render(

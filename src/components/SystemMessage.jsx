@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "./systemMessage.css";
+import "./SystemMessage.css";
 
 function SystemMessage({ message, onFinishDisplay, speed }) {
   const [displayedMessage, setDisplayedMessage] = useState(message);

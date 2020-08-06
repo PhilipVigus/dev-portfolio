@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./projectSummary.css";
+import "./ProjectSummary.css";
 
 function ProjectSummary({ title, summaryText, skills, github, deployLink }) {
   return (

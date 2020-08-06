@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "./typedCommand.css";
+import "./TypedCommand.css";
 
 function TypedCommand({ command, speed, onFinishDisplay }) {
   const [position, setPosition] = useState(0);
