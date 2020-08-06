@@ -1,6 +1,6 @@
 import React from "react";
 
-function CommandPrompt() {
+const CommandPrompt = () => {
   return (
     <span>
       <span style={{ color: "lawngreen" }}>phil@awesome-dev</span>:
@@ -8,6 +8,6 @@ function CommandPrompt() {
       <span style={{ whiteSpace: "pre" }}>$ </span>
     </span>
   );
-}
+};
 
 export default CommandPrompt;

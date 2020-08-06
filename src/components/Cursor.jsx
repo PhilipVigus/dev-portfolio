@@ -1,7 +1,7 @@
 import React from "react";
 
-function Cursor() {
+const Cursor = () => {
   return <span>&#9608;</span>;
-}
+};
 
 export default Cursor;
