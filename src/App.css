@@ -18,14 +18,7 @@
 }
 
 html {
-  box-sizing: border-box; /* size calculations take border and padding into account */
-
-  /*
-    Assumes default font size on browser of 16px. 62.5% * 16 = 10px.
-    The reason we do this is so that our base font size for all elements is 10px.
-    It makes the maths much easier to alter font sizes of individual elements
-    when you have a nice round number like this to start with
-  */
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
