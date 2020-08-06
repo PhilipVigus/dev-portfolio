@@ -1,25 +1,25 @@
 import React from "react";
 import "./AboutMe.css";
 
-function AboutMe() {
-  function greeting() {
+const AboutMe = () => {
+  const getTimeOfDay = () => {
     const dateNow = new Date(Date.now());
-    const localHours = dateNow.getHours();
+    const currentHours = dateNow.getHours();
 
-    if (localHours >= 0 && localHours < 12) {
+    if (currentHours >= 0 && currentHours < 12) {
       return "morning";
-    } else if (localHours >= 12 && localHours < 17) {
+    } else if (currentHours >= 12 && currentHours < 17) {
       return "afternoon";
     } else {
       return "evening";
     }
-  }
+  };
 
   return (
-    <div className="about-me-container">
-      <div className="about-me-text-container">
-        <h1 className="about-me-heading">
-          Good {greeting()}! I&apos;m Phil, a full stack developer
+    <div className="about-me__container">
+      <div>
+        <h1 className="about-me__header">
+          Good {getTimeOfDay()}! I&apos;m Phil, a full stack developer
         </h1>
         <div>
           <p>
@@ -46,7 +46,7 @@ function AboutMe() {
             changing tech landscape means that there will always be something
             new to understand.
           </p>
-          <div className="about-me-link-container">
+          <div className="about-me__link-container">
             <a
               className="about-me__link"
               href="https://github.com/PhilipVigus/"
@@ -87,6 +87,6 @@ function AboutMe() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutMe;
