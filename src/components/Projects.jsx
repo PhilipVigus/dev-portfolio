@@ -7,6 +7,24 @@ const Projects = () => {
     <div>
       <div className="project-summaries">
         <ProjectSummary
+          title="Weather"
+          summaryText="A weather forecast app using Redux and Styled Components."
+          skills={[
+            "JavaScript",
+            "React",
+            "Redux",
+            "Styled Components",
+            "Express",
+            "Jest",
+            "React testing library",
+            "Circle CI",
+            "Netlify",
+            "Heroku",
+          ]}
+          github="https://github.com/PhilipVigus/weather-app"
+          deployLink="https://weather-phil.netlify.app/"
+        />
+        <ProjectSummary
           title="Chitter"
           summaryText="A Twitter clone written in Typescript."
           skills={[
@@ -23,7 +41,6 @@ const Projects = () => {
           github="https://github.com/PhilipVigus/chitter"
           deployLink="https://chitter.netlify.app/"
         />
-
         <ProjectSummary
           title="WhatStack"
           summaryText="A cross between WhatsApp and Stack Overflow. Our final group project
