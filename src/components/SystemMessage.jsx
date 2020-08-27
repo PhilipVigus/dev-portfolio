@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "./SystemMessage.css";
+import styled from "styled-components";
+
+const StyledMessage = styled.span`
+  white-space: pre;
+`;
 
 const SystemMessage = ({ message, onFinishDisplay, speed }) => {
   const progressString = " .";
@@ -19,7 +23,7 @@ const SystemMessage = ({ message, onFinishDisplay, speed }) => {
     return () => {};
   }, [displayedMessage, onFinishDisplay, message.length, speed, lengthToAdd]);
 
-  return <span className="system-message">{`${displayedMessage}`}</span>;
+  return <StyledMessage>{`${displayedMessage}`}</StyledMessage>;
 };
 
 SystemMessage.propTypes = {
