@@ -23,7 +23,7 @@ const AboutMeLinkContainer = styled.div`
   margin-top: 20px;
 `;
 
-const AboutMeLink = styled.div`
+const AboutMeLink = styled.a`
   font-size: 1.6rem;
   margin: 0 10px;
   position: relative;
