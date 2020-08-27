@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "./TypedCommand.css";
+import styled from "styled-components";
+
+const StyledTypedCommand = styled.span`
+  white-space: pre;
+`;
 
 const TypedCommand = ({ command, speed, onFinishDisplay }) => {
   const [position, setPosition] = useState(0);
@@ -23,7 +27,7 @@ const TypedCommand = ({ command, speed, onFinishDisplay }) => {
     return () => {};
   }, [onFinishDisplay, command.length, position, speed]);
 
-  return <span className="typed-command">{command.slice(0, position)}</span>;
+  return <StyledTypedCommand>{command.slice(0, position)}</StyledTypedCommand>;
 };
 
 TypedCommand.propTypes = {

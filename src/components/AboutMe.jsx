@@ -1,5 +1,53 @@
 import React from "react";
-import "./AboutMe.css";
+import styled from "styled-components";
+
+const AboutMeContainer = styled.section`
+  display: flex;
+  padding: 30px;
+
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column-reverse;
+    }
+  }
+`;
+
+const AboutMeHeader = styled.h1`
+  font-size: 3rem;
+  margin-bottom: 15px;
+`;
+
+const AboutMeLinkContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+`;
+
+const AboutMeLink = styled.a`
+  font-size: 1.6rem;
+  margin: 0 10px;
+  position: relative;
+
+  @media (hover: hover) {
+    &:before {
+      background-color: var(--darkest-shade);
+      bottom: 1px;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: all 0.2s ease-in-out;
+      visibility: hidden;
+      width: 100%;
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+      visibility: visible;
+    }
+  }
+`;
 
 const AboutMe = () => {
   const getTimeOfDay = () => {
@@ -16,11 +64,11 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="about-me__container">
+    <AboutMeContainer>
       <div>
-        <h1 className="about-me__header">
+        <AboutMeHeader>
           Good {getTimeOfDay()}! I&apos;m Phil, a full stack developer
-        </h1>
+        </AboutMeHeader>
         <div>
           <p>
             After qualifying with a degree in Computer Science, the early part
@@ -46,46 +94,42 @@ const AboutMe = () => {
             changing tech landscape means that there will always be something
             new to understand.
           </p>
-          <div className="about-me__link-container">
-            <a
-              className="about-me__link"
+          <AboutMeLinkContainer>
+            <AboutMeLink
               href="https://github.com/PhilipVigus/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Github
-            </a>
+            </AboutMeLink>
             |
-            <a
-              className="about-me__link"
+            <AboutMeLink
               href="https://www.linkedin.com/in/philvigus/"
               target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
-            </a>
+            </AboutMeLink>
             |
-            <a
-              className="about-me__link"
+            <AboutMeLink
               href="https://medium.com/@philvigus"
               target="_blank"
               rel="noopener noreferrer"
             >
               Blog
-            </a>
+            </AboutMeLink>
             |
-            <a
-              className="about-me__link"
+            <AboutMeLink
               href="./Phil Vigus CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               CV
-            </a>
-          </div>
+            </AboutMeLink>
+          </AboutMeLinkContainer>
         </div>
       </div>
-    </div>
+    </AboutMeContainer>
   );
 };
 

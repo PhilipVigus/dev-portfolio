@@ -1,11 +1,19 @@
 import React from "react";
+import styled from "styled-components";
 import ProjectSummary from "./ProjectSummary";
-import "./Projects.css";
+
+const SummariesContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+`;
 
 const Projects = () => {
   return (
     <div>
-      <div className="project-summaries">
+      <SummariesContainer>
         <ProjectSummary
           title="Weather"
           summaryText="A weather forecast app using Redux and Styled Components."
@@ -76,7 +84,7 @@ const Projects = () => {
           github="https://github.com/PhilipVigus/bowling-challenge"
           deployLink="http://phils-bowlingcard.surge.sh/"
         />
-      </div>
+      </SummariesContainer>
     </div>
   );
 };

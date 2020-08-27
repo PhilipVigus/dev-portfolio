@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
+import styled from "styled-components";
 import CommandPrompt from "./CommandPrompt";
 import Cursor from "./Cursor";
 import TypedCommand from "./TypedCommand";
 import SystemMessage from "./SystemMessage";
 import messageData from "./messageData";
-import "./LoadingScreen.css";
+
+const LoadingScreenContainer = styled.section`
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  line-height: 1.3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+`;
 
 const LoadingScreen = () => {
   const history = useHistory();
@@ -52,13 +66,13 @@ const LoadingScreen = () => {
 
   return (
     <Link to="/about">
-      <div className="loading-screen">
+      <LoadingScreenContainer>
         <span style={{ padding: "6vw" }}>
           <CommandPrompt />
           {displayedMessages}
           {displayCursor && <Cursor />}
         </span>
-      </div>
+      </LoadingScreenContainer>
     </Link>
   );
 };
