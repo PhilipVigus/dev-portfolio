@@ -1,11 +1,37 @@
 import React from "react";
-import NavBarLink from "./NavBarLink";
-import "./NavBar.css";
+import styled from "styled-components";
+import NavBarLink, { StyledNavBarLink } from "./NavBarLink";
+
+const StyledNav = styled.nav`
+  background-color: var(--darkest-shade);
+  color: var(--lightest-shade);
+  font-size: 2rem;
+  height: 100vh;
+  padding: 10px 3%;
+  width: auto;
+`;
+
+const NavLinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  @media (max-width: 48em) {
+    & {
+      flex-direction: row;
+      height: auto;
+      justify-content: space-around;
+      margin-top: 0;
+    }
+  }
+`;
 
 const NavBar = () => {
   return (
-    <nav>
-      <div className="nav__link-container">
+    <StyledNav>
+      <NavLinkContainer>
         <NavBarLink link="about" text="About" />
         <NavBarLink link="projects" text="Projects" />
         <a
@@ -13,10 +39,10 @@ const NavBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="nav__link">Contact</span>
+          <StyledNavBarLink>Contact</StyledNavBarLink>
         </a>
-      </div>
-    </nav>
+      </NavLinkContainer>
+    </StyledNav>
   );
 };
 
